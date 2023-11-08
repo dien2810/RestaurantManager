@@ -201,6 +201,7 @@
             this.BillDG.RowTemplate.Height = 24;
             this.BillDG.Size = new System.Drawing.Size(818, 411);
             this.BillDG.TabIndex = 20;
+            this.BillDG.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.BillDG_CellContentClick);
             // 
             // UC_Bills
             // 
