@@ -74,14 +74,27 @@ namespace RestaurantManager.GUI
 
         private void AddBillBtn_Click(object sender, EventArgs e)
         {
+            if(TotalTextbox.Text == "0")
+            {
+                return;
+            }
             // add to Bill and BillDetail
-            //Bill_DAO.Insert(new BillDTO(float.Parse(TotalTextbox.Text),DateTime.Now, "Chưa thanh toán"), ref Msg);
-            //Bill_DAO.
-            //for (int i = 0; i < ProductListDG.Rows.Count - 1; i++)
-            //{
-            //BillDetails_DAO.Insert(new BillDetailsDTO());
-            //}
-            MessageBox.Show(DataProvider.NextID("SanPham").ToString());
+            Bill_DAO.Insert(new BillDTO(1, 1, 1), ref Msg);
+            if (Msg != "") { MessageBox.Show(Msg); }
+            
+            int Quantity;
+            string ProductName;
+            for (int i = 0; i < ProductListDG.Rows.Count - 1; i++)
+            {
+                Quantity = int.Parse(ProductListDG.Rows[i].Cells[1].Value.ToString());
+                ProductName = ProductListDG.Rows[i].Cells[0].Value.ToString();
+                MessageBox.Show(Quantity.ToString() + ProductName);
+                BillDetails_DAO.Insert(DataProvider.NextID("HoaDon"), ProductName, Quantity, ref Msg);
+            }
+            if(Msg != "")
+            {
+                MessageBox.Show(Msg);
+            }
         }
 
         private void ProductListDG_CellClick(object sender, DataGridViewCellEventArgs e)

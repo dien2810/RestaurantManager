@@ -13,11 +13,15 @@ namespace RestaurantManager.DAO
     {
         public static string ConnectionString = "Data Source=MSI\\SQLEXPRESS;Initial Catalog=QuanLyNhaHangAnUong;Integrated Security=True";
         public static SqlConnection Connection;
+
         public static void OpenConnection()
         {
             if (Connection.State == ConnectionState.Closed)
             {
-                Connection.Open();
+                if (Connection.State == ConnectionState.Closed)
+                {
+                    Connection.Open();
+                }
             }
         }
         public static void CloseConnection()
@@ -59,7 +63,7 @@ namespace RestaurantManager.DAO
         }
         public static int ExecuteNonQuery(string Query, ref string ErrMsg, object[] ParameterValues = null)
         {
-            //ConnectionString = "Data Source=MSI\\SQLEXPRESS;Initial Catalog=QuanLyNhaHangAnUong;Integrated Security=True";
+            ConnectionString = "Data Source=MSI\\SQLEXPRESS;Initial Catalog=QuanLyNhaHangAnUong;Integrated Security=True";
             int rowsAffected = 0;
             try
             {
@@ -88,7 +92,7 @@ namespace RestaurantManager.DAO
         }
         public static object ExecuteScalar(string Query, ref string ErrMsg, object[] ParameterValues = null)
         {
-            //ConnectionString = "Data Source=MSI\\SQLEXPRESS;Initial Catalog=QuanLyNhaHangAnUong;Integrated Security=True";
+            ConnectionString = "Data Source=MSI\\SQLEXPRESS;Initial Catalog=QuanLyNhaHangAnUong;Integrated Security=True";
             object Data = null;
             try
             {
@@ -117,11 +121,19 @@ namespace RestaurantManager.DAO
         }
         public static int NextID(string TableName)
         {
+            ConnectionString = "Data Source=MSI\\SQLEXPRESS;Initial Catalog=QuanLyNhaHangAnUong;Integrated Security=True";
+            int LastId = 0;
+
+            using (Connection = new SqlConnection(ConnectionString))
+            {
             OpenConnection();
-            SqlCommand cmd = new SqlCommand("SELECT IDEN_CURRENT('" + TableName + "')", Connection);
-            int LastId = Convert.ToInt32(cmd.ExecuteScalar());
-            CloseConnection();
-            return LastId + 1;
+                SqlCommand cmd = new SqlCommand("SELECT IDENT_CURRENT('" + TableName + "')", Connection);
+                LastId = Convert.ToInt32(cmd.ExecuteScalar());
+
+                CloseConnection();
+            }
+
+            return LastId;
         }
     }
 }

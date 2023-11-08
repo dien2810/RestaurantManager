@@ -11,25 +11,12 @@ namespace RestaurantManager.DAO
     internal class BillDetailsDAO
     {
         string query;
-        public int Insert(BillDetailsDTO BillDe, ref string ErrMsg)
+        public int Insert(int BillID, string ProductName, int Quantity, ref string ErrMsg)
         {
-            query = "";
+            query = "EXEC ThemChiTietHD @MaHD , @TenSP , @SoLuong";
             return DataProvider.ExecuteNonQuery(query, ref ErrMsg, new object[] {
-                BillDe.ProductID, BillDe.BillID, BillDe.Quantity
+                BillID, ProductName, Quantity
             });
-        }
-        public int Update(BillDetailsDTO BillDe, ref string ErrMsg)
-        {
-            query = "";
-            return DataProvider.ExecuteNonQuery(query, ref ErrMsg, new object[] {
-                BillDe.ProductID, BillDe.BillID, BillDe.Quantity
-            });
-        }
-
-        public DataTable GetAll(ref string ErrMsg)
-        {
-            query = "SELECT * FROM ChiTietHD";
-            return DataProvider.ExecuteQuery(query, ref ErrMsg);
         }
     }
 }

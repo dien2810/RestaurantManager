@@ -8,15 +8,21 @@ namespace RestaurantManager.DTO
 {
     internal class BillDTO
     {
-        public BillDTO(float Value, DateTime Time, string State) 
+        public BillDTO(int CustomerID, int EmployeeID, int TableID) 
         {
-            this.Value = Value;
-            this.Time = Time;
-            this.State = State;
+            this.CustomerID = CustomerID;
+            this.EmployeeID = EmployeeID;
+            this.TableID = TableID;
         }
+
+        public int CustomerID {  get; set; }
+        public int EmployeeID { get; set; }
+        public int TableID { get; set; }
+
         public int ID { get; set; }
         public float Value { get; set;}
         public DateTime Time { get; set;}
         public string State { get; set;}
+
     }
 }

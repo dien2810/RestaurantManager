@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RestaurantManager.DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,20 @@ namespace RestaurantManager.GUI.UserControls
         public UC_Bills()
         {
             InitializeComponent();
+        }
+
+        private void BillsDG_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void UC_Bills_Load(object sender, EventArgs e)
+        {
+            string Msg = "";
+            int Month = int.Parse(DateTime.Now.ToString("MM"));
+            Month = 9;
+            BillDG.DataSource = DataProvider.ExecuteQuery("SELECT * FROM HoaDonTheoThangCuaNam(2023, " + Month + ")", ref Msg);
+            //BillDG.DataSource = DataProvider.ExecuteQuery("SELECT * FROM HoaDon", ref Msg);
         }
     }
 }
