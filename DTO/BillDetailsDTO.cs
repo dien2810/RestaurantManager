@@ -8,9 +8,9 @@ namespace RestaurantManager.DTO
 {
     internal class BillDetailsDTO
     {
-        private int ProductID;
-        private int BillID;
-        private int Quantity;
+        public int ProductID {  get; set; }
+        public int BillID { get; set; }
+        public int Quantity { get; set; }
 
         public BillDetailsDTO(int ProductID, int BillID, int Quantity)
         {

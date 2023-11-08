@@ -66,7 +66,7 @@ namespace RestaurantManager.DAO
                 using(Connection = new SqlConnection(ConnectionString))
                 {
                     OpenConnection();
-                    SqlCommand cmd = new SqlCommand("Query", Connection);
+                    SqlCommand cmd = new SqlCommand(Query, Connection);
                     if (ParameterValues != null)
                     {
                         string[] Parameters = Query.Split(' ');
@@ -95,7 +95,7 @@ namespace RestaurantManager.DAO
                 using (Connection = new SqlConnection(ConnectionString))
                 {
                     OpenConnection();
-                    SqlCommand cmd = new SqlCommand("Query", Connection);
+                    SqlCommand cmd = new SqlCommand(Query, Connection);
                     if (ParameterValues != null)
                     {
                         string[] Parameters = Query.Split(' ');
@@ -114,6 +114,14 @@ namespace RestaurantManager.DAO
             catch (Exception e) { ErrMsg = e.Message; }
             finally { CloseConnection(); }
             return Data;
+        }
+        public static int NextID(string TableName)
+        {
+            OpenConnection();
+            SqlCommand cmd = new SqlCommand("SELECT IDEN_CURRENT('" + TableName + "')", Connection);
+            int LastId = Convert.ToInt32(cmd.ExecuteScalar());
+            CloseConnection();
+            return LastId + 1;
         }
     }
 }

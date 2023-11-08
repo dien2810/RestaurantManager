@@ -8,9 +8,8 @@ namespace RestaurantManager.DTO
 {
     internal class BillDTO
     {
-        public BillDTO(int ID, float Value, DateTime Time, string State) 
+        public BillDTO(float Value, DateTime Time, string State) 
         {
-            this.ID = ID;
             this.Value = Value;
             this.Time = Time;
             this.State = State;

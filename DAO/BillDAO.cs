@@ -14,33 +14,27 @@ namespace RestaurantManager.DAO
         string query;
         public int Insert(BillDTO Bill, ref string ErrMsg)
         {
-            query = ""; 
+            query = "EXEC ThemHoaDon @MaKH @MaNV @MaBan"; 
             return DataProvider.ExecuteNonQuery(query, ref ErrMsg, new object[] {
                 Bill.ID, Bill.Value, Bill.Time, Bill.State
             });
         }
         public int Update(BillDTO Bill, ref string ErrMsg)
         {
-            query = "";
+            query = "EXEC SuaHoaDon @MaKH @TrangThai @TriGiaHD @MaBan";
             return DataProvider.ExecuteNonQuery(query, ref ErrMsg, new object[] {
                 Bill.ID, Bill.Value, Bill.Time, Bill.State
             });
         }
         public int Delete(string BillID, ref string ErrMsg)
         {
-            query = "";
+            query = "EXEC XoaHoaDon @MaHD";
             return DataProvider.ExecuteNonQuery(query, ref ErrMsg, new object[] {BillID});
         }
 
         public DataTable GetAll(ref string ErrMsg) 
         {
             query = "SELECT * FROM HoaDon";
-            return DataProvider.ExecuteQuery(query, ref ErrMsg);
-        }
-
-        public DataTable GetAllInDay(ref string ErrMsg)
-        {
-            query = "";
             return DataProvider.ExecuteQuery(query, ref ErrMsg);
         }
     }

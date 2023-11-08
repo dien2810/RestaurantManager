@@ -17,7 +17,7 @@ namespace RestaurantManager
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AddBillsSubForm());
+            Application.Run(new ManagerForm1());
         }
     }
 }
