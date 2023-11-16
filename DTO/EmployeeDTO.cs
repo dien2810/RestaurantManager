@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -8,7 +9,7 @@ namespace RestaurantManager.DTO
 {
     internal class EmployeeDTO
     {
-        public EmployeeDTO(int ID, string FirstName, string LastName, string Address, DateTime BirthDate, string Gender, string PhoneNumber, DateTime StartingDate) 
+        public EmployeeDTO(int ID, string LastName, string FirstName, string Address, DateTime BirthDate, string Gender, string PhoneNumber, DateTime StartingDate, int JobID) 
         { 
             this.ID = ID;
             this.FirstName = FirstName;
@@ -18,6 +19,7 @@ namespace RestaurantManager.DTO
             this.Gender = Gender;
             this.PhoneNumber = PhoneNumber;
             this.StartingDate = StartingDate;
+            this.JobID = JobID;
         }
         public int ID { get; set; }
         public string FirstName { get; set;}
@@ -27,5 +29,6 @@ namespace RestaurantManager.DTO
         public string Gender { get; set; }
         public string PhoneNumber { get; set; }
         public DateTime StartingDate { get; set; }
+        public int JobID { get; set; }
     }
 }

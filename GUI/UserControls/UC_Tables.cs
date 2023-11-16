@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RestaurantManager.DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,13 @@ namespace RestaurantManager.GUI.UserControls
         public UC_Tables()
         {
             InitializeComponent();
+        }
+
+        private void UC_Tables_Load(object sender, EventArgs e)
+        {
+            string Msg = "";
+            TablesDG.DataSource = DataProvider.ExecuteQuery("SELECT * FROM BanAn", ref Msg);
+           
         }
 
         private void TableSetBtn_Click(object sender, EventArgs e)

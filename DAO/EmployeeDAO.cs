@@ -15,42 +15,41 @@ namespace RestaurantManager.DAO
         
         public int Insert(EmployeeDTO Employee, ref string ErrMsg)
         {
-            query = "EXEC [Tên proc hay func] ";
+            query = "EXEC PROC_ThemNhanVien @HoNV , @TenNV , @NgaySinh , @GioiTinh , @DiaChi , @SDT , @NgayTD , @MaNQL , @MaCV";
             return DataProvider.ExecuteNonQuery(query, ref ErrMsg, new object[]
             {
-                Employee.ID, Employee.FirstName, Employee.FirstName, Employee.Address, Employee.BirthDate, Employee.Gender, Employee.PhoneNumber, Employee.StartingDate
+                Employee.LastName, Employee.FirstName, Employee.BirthDate, Employee.Gender, 
+                Employee.Address, Employee.PhoneNumber, Employee.StartingDate, 1 ,Employee.JobID
             });
         }
         public int Update(EmployeeDTO Employee, ref string ErrMsg)
         {
-            query = "EXEC [Tên proc hay func] ";
+            query = "EXEC EXEC PROC_ThemNhanVien @MaNV , @HoNV , @TenNV , @NgaySinh , @GioiTinh , @DiaChi , @SDT , @NgayTD , @MaNQL , @MaCV ";
             return DataProvider.ExecuteNonQuery(query, ref ErrMsg, new object[]
             {
-                Employee.ID, Employee.FirstName, Employee.FirstName, Employee.Address, Employee.BirthDate, Employee.Gender, Employee.PhoneNumber, Employee.StartingDate
+                Employee.ID, Employee.FirstName, Employee.FirstName, Employee.BirthDate, Employee.Gender, 
+                Employee.Address, Employee.PhoneNumber, Employee.StartingDate, 1, Employee.JobID
             });
         }
-        public int Delete(string EmployeeID, ref string ErrMsg)
+        public int Delete(int EmployeeID, ref string ErrMsg)
         {
-            query = "EXEC [Tên proc hay func] ";
-            return DataProvider.ExecuteNonQuery(query, ref ErrMsg, new object[]{EmployeeID});
+            query = "EXEC PROC_XoaNhanVien @MaNV";
+            return DataProvider.ExecuteNonQuery(query, ref ErrMsg, new object[]{ EmployeeID });
         }
 
-        // get the Employee list
         public DataTable GetAll(ref string ErrMsg)
         {
             query = "SELECT * FROM V_ThongTinNhanVien";
             return DataProvider.ExecuteQuery(query, ref ErrMsg);
         }
 
-        // search Employee
         public DataTable SearchByName(string Name, ref string ErrMsg) 
         {
-            return null;
-        }
-        public DataTable SearchByID(string ID, ref string ErrMsg)
-        {
-            query = "";
-            return DataProvider.ExecuteQuery(query, ref ErrMsg);
+            query = "FUNC_TimKiemNhanVien @HoNV , @TenNV , @GioiTinh , @SDT , @MaNQL , @TenCV";
+            return DataProvider.ExecuteQuery(query, ref ErrMsg, new object[]
+            {
+                null, Name, null, null, null
+            });
         }
     }
 }

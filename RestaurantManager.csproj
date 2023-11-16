@@ -88,11 +88,42 @@
     <Compile Include="DTO\ProviderDTO.cs" />
     <Compile Include="DTO\ShiftDTO.cs" />
     <Compile Include="DTO\ShiftTableDTO.cs" />
+    <Compile Include="GUI\AddEmployeesSubForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\AddEmployeesSubForm.Designer.cs">
+      <DependentUpon>AddEmployeesSubForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\AddMaterialsSubForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\AddMaterialsSubForm.Designer.cs">
+      <DependentUpon>AddMaterialsSubForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UpdateCustomersSubForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\UpdateCustomersSubForm.Designer.cs">
+      <DependentUpon>UpdateCustomersSubForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UpdateMaterialsSubForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\UpdateMaterialsSubForm.Designer.cs">
+      <DependentUpon>UpdateMaterialsSubForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShowMessage.cs" />
     <Compile Include="GUI\AddBillsSubForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\AddBillsSubForm.Designer.cs">
       <DependentUpon>AddBillsSubForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\AddCustomersSubForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\AddCustomersSubForm.Designer.cs">
+      <DependentUpon>AddCustomersSubForm.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\ManagerForm1.cs">
       <SubType>Form</SubType>
@@ -158,8 +189,23 @@
     <EmbeddedResource Include="GUI\AddBillsSubForm.resx">
       <DependentUpon>AddBillsSubForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\AddCustomersSubForm.resx">
+      <DependentUpon>AddCustomersSubForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\AddEmployeesSubForm.resx">
+      <DependentUpon>AddEmployeesSubForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\AddMaterialsSubForm.resx">
+      <DependentUpon>AddMaterialsSubForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\ManagerForm1.resx">
       <DependentUpon>ManagerForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UpdateCustomersSubForm.resx">
+      <DependentUpon>UpdateCustomersSubForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UpdateMaterialsSubForm.resx">
+      <DependentUpon>UpdateMaterialsSubForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\UserControls\UC_Bills.resx">
       <DependentUpon>UC_Bills.cs</DependentUpon>
@@ -223,6 +269,32 @@
   <ItemGroup>
     <None Include="assets\Icons\ManagerIcon.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="assets\Icons\bill.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\Icons\dinner-table.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\Icons\Customer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\Icons\employee.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\Icons\carrots.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\Icons\checklist.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\Icons\scheduling.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\Icons\revenue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\Icons\restaurant-building.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

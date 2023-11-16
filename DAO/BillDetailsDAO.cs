@@ -13,7 +13,7 @@ namespace RestaurantManager.DAO
         string query;
         public int Insert(int BillID, string ProductName, int Quantity, ref string ErrMsg)
         {
-            query = "EXEC ThemChiTietHD @MaHD , @TenSP , @SoLuong";
+            query = "EXEC PROC_ThemChiTietHD @MaHD , @TenSP , @SoLuong";
             return DataProvider.ExecuteNonQuery(query, ref ErrMsg, new object[] {
                 BillID, ProductName, Quantity
             });

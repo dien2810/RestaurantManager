@@ -31,14 +31,17 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
+            this.MaterialsDG = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.TableSetBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.UpdateMaterialBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.DeleteMaterialBtn = new Guna.UI2.WinForms.Guna2Button();
+            ((System.ComponentModel.ISupportInitialize)(this.MaterialsDG)).BeginInit();
             this.SuspendLayout();
             // 
-            // guna2DataGridView1
+            // MaterialsDG
             // 
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.MaterialsDG.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -46,9 +49,9 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.guna2DataGridView1.ColumnHeadersHeight = 4;
-            this.guna2DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.MaterialsDG.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.MaterialsDG.ColumnHeadersHeight = 20;
+            this.MaterialsDG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -56,51 +59,121 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
-            this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.Location = new System.Drawing.Point(33, 117);
-            this.guna2DataGridView1.Name = "guna2DataGridView1";
-            this.guna2DataGridView1.RowHeadersVisible = false;
-            this.guna2DataGridView1.RowHeadersWidth = 51;
-            this.guna2DataGridView1.RowTemplate.Height = 24;
-            this.guna2DataGridView1.Size = new System.Drawing.Size(1075, 416);
-            this.guna2DataGridView1.TabIndex = 1;
-            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.guna2DataGridView1.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.Height = 4;
-            this.guna2DataGridView1.ThemeStyle.ReadOnly = false;
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.Height = 24;
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.MaterialsDG.DefaultCellStyle = dataGridViewCellStyle3;
+            this.MaterialsDG.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.MaterialsDG.Location = new System.Drawing.Point(30, 116);
+            this.MaterialsDG.Name = "MaterialsDG";
+            this.MaterialsDG.RowHeadersVisible = false;
+            this.MaterialsDG.RowHeadersWidth = 51;
+            this.MaterialsDG.RowTemplate.Height = 24;
+            this.MaterialsDG.Size = new System.Drawing.Size(818, 411);
+            this.MaterialsDG.TabIndex = 1;
+            this.MaterialsDG.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.MaterialsDG.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.MaterialsDG.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.MaterialsDG.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.MaterialsDG.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.MaterialsDG.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.MaterialsDG.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.MaterialsDG.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.MaterialsDG.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.MaterialsDG.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaterialsDG.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.MaterialsDG.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.MaterialsDG.ThemeStyle.HeaderStyle.Height = 20;
+            this.MaterialsDG.ThemeStyle.ReadOnly = false;
+            this.MaterialsDG.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.MaterialsDG.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.MaterialsDG.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaterialsDG.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.MaterialsDG.ThemeStyle.RowsStyle.Height = 24;
+            this.MaterialsDG.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.MaterialsDG.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.MaterialsDG.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.MaterialsDG_CellClick);
+            // 
+            // TableSetBtn
+            // 
+            this.TableSetBtn.AutoRoundedCorners = true;
+            this.TableSetBtn.BorderRadius = 21;
+            this.TableSetBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.TableSetBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.TableSetBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.TableSetBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.TableSetBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.TableSetBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
+            this.TableSetBtn.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TableSetBtn.ForeColor = System.Drawing.Color.White;
+            this.TableSetBtn.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(70)))), ((int)(((byte)(97)))));
+            this.TableSetBtn.Location = new System.Drawing.Point(907, 126);
+            this.TableSetBtn.Name = "TableSetBtn";
+            this.TableSetBtn.Size = new System.Drawing.Size(187, 45);
+            this.TableSetBtn.TabIndex = 6;
+            this.TableSetBtn.Text = "Thêm NL mới";
+            this.TableSetBtn.Click += new System.EventHandler(this.TableSetBtn_Click);
+            // 
+            // UpdateMaterialBtn
+            // 
+            this.UpdateMaterialBtn.AutoRoundedCorners = true;
+            this.UpdateMaterialBtn.BorderRadius = 21;
+            this.UpdateMaterialBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.UpdateMaterialBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.UpdateMaterialBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.UpdateMaterialBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.UpdateMaterialBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.UpdateMaterialBtn.Enabled = false;
+            this.UpdateMaterialBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
+            this.UpdateMaterialBtn.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UpdateMaterialBtn.ForeColor = System.Drawing.Color.White;
+            this.UpdateMaterialBtn.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(70)))), ((int)(((byte)(97)))));
+            this.UpdateMaterialBtn.Location = new System.Drawing.Point(907, 194);
+            this.UpdateMaterialBtn.Name = "UpdateMaterialBtn";
+            this.UpdateMaterialBtn.Size = new System.Drawing.Size(187, 45);
+            this.UpdateMaterialBtn.TabIndex = 6;
+            this.UpdateMaterialBtn.Text = "Sửa NL";
+            this.UpdateMaterialBtn.Click += new System.EventHandler(this.UpdateMaterialBtn_Click);
+            // 
+            // DeleteMaterialBtn
+            // 
+            this.DeleteMaterialBtn.AutoRoundedCorners = true;
+            this.DeleteMaterialBtn.BorderRadius = 21;
+            this.DeleteMaterialBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.DeleteMaterialBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.DeleteMaterialBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.DeleteMaterialBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.DeleteMaterialBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.DeleteMaterialBtn.Enabled = false;
+            this.DeleteMaterialBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
+            this.DeleteMaterialBtn.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeleteMaterialBtn.ForeColor = System.Drawing.Color.White;
+            this.DeleteMaterialBtn.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(70)))), ((int)(((byte)(97)))));
+            this.DeleteMaterialBtn.Location = new System.Drawing.Point(907, 265);
+            this.DeleteMaterialBtn.Name = "DeleteMaterialBtn";
+            this.DeleteMaterialBtn.Size = new System.Drawing.Size(187, 45);
+            this.DeleteMaterialBtn.TabIndex = 6;
+            this.DeleteMaterialBtn.Text = "Xoá NL";
+            this.DeleteMaterialBtn.Click += new System.EventHandler(this.DeleteMaterialBtn_Click);
             // 
             // UC_Materials
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.guna2DataGridView1);
+            this.Controls.Add(this.DeleteMaterialBtn);
+            this.Controls.Add(this.UpdateMaterialBtn);
+            this.Controls.Add(this.TableSetBtn);
+            this.Controls.Add(this.MaterialsDG);
             this.Name = "UC_Materials";
             this.Size = new System.Drawing.Size(1147, 560);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.UC_Materials_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.MaterialsDG)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
+        private Guna.UI2.WinForms.Guna2DataGridView MaterialsDG;
+        private Guna.UI2.WinForms.Guna2Button TableSetBtn;
+        private Guna.UI2.WinForms.Guna2Button UpdateMaterialBtn;
+        private Guna.UI2.WinForms.Guna2Button DeleteMaterialBtn;
     }
 }

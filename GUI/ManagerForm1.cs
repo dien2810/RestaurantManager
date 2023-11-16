@@ -64,7 +64,12 @@ namespace RestaurantManager.GUI
 
         private void ProductTagBtn_Click(object sender, EventArgs e)
         {
-            UC_Products UC = new UC_Products();
+           
+        }
+
+        private void MaterialTabBtn_Click(object sender, EventArgs e)
+        {
+            UC_Materials UC = new UC_Materials();
             addUserControl(UC);
         }
     }

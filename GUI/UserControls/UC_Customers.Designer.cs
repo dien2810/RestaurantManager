@@ -28,187 +28,200 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.TableSetBtn = new Guna.UI2.WinForms.Guna2Button();
-            this.BillsDG = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
-            ((System.ComponentModel.ISupportInitialize)(this.BillsDG)).BeginInit();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.InsertCustomerBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.PhoneNumberTextbox = new Guna.UI2.WinForms.Guna2TextBox();
+            this.SearchCustomerBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.UpdateCustomerBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.DeleteCustomerBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.CustomersDG = new Guna.UI2.WinForms.Guna2DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.CustomersDG)).BeginInit();
             this.SuspendLayout();
             // 
-            // TableSetBtn
+            // InsertCustomerBtn
             // 
-            this.TableSetBtn.AutoRoundedCorners = true;
-            this.TableSetBtn.BorderRadius = 21;
-            this.TableSetBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.TableSetBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.TableSetBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.TableSetBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.TableSetBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
-            this.TableSetBtn.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TableSetBtn.ForeColor = System.Drawing.Color.White;
-            this.TableSetBtn.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(70)))), ((int)(((byte)(97)))));
-            this.TableSetBtn.Location = new System.Drawing.Point(914, 127);
-            this.TableSetBtn.Name = "TableSetBtn";
-            this.TableSetBtn.Size = new System.Drawing.Size(182, 45);
-            this.TableSetBtn.TabIndex = 15;
-            this.TableSetBtn.Text = "Thêm KH";
+            this.InsertCustomerBtn.AutoRoundedCorners = true;
+            this.InsertCustomerBtn.BorderRadius = 21;
+            this.InsertCustomerBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.InsertCustomerBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.InsertCustomerBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.InsertCustomerBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.InsertCustomerBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.InsertCustomerBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
+            this.InsertCustomerBtn.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.InsertCustomerBtn.ForeColor = System.Drawing.Color.White;
+            this.InsertCustomerBtn.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(70)))), ((int)(((byte)(97)))));
+            this.InsertCustomerBtn.Location = new System.Drawing.Point(914, 127);
+            this.InsertCustomerBtn.Name = "InsertCustomerBtn";
+            this.InsertCustomerBtn.Size = new System.Drawing.Size(182, 45);
+            this.InsertCustomerBtn.TabIndex = 15;
+            this.InsertCustomerBtn.Text = "Thêm KH";
+            this.InsertCustomerBtn.Click += new System.EventHandler(this.InsertCustomerBtn_Click);
             // 
-            // BillsDG
+            // PhoneNumberTextbox
             // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.BillsDG.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.BillsDG.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.BillsDG.ColumnHeadersHeight = 4;
-            this.BillsDG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.BillsDG.DefaultCellStyle = dataGridViewCellStyle6;
-            this.BillsDG.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.BillsDG.Location = new System.Drawing.Point(30, 116);
-            this.BillsDG.Name = "BillsDG";
-            this.BillsDG.RowHeadersVisible = false;
-            this.BillsDG.RowHeadersWidth = 51;
-            this.BillsDG.RowTemplate.Height = 24;
-            this.BillsDG.Size = new System.Drawing.Size(818, 416);
-            this.BillsDG.TabIndex = 11;
-            this.BillsDG.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.BillsDG.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.BillsDG.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.BillsDG.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.BillsDG.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.BillsDG.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.BillsDG.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.BillsDG.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.BillsDG.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.BillsDG.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BillsDG.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.BillsDG.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.BillsDG.ThemeStyle.HeaderStyle.Height = 4;
-            this.BillsDG.ThemeStyle.ReadOnly = false;
-            this.BillsDG.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.BillsDG.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.BillsDG.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BillsDG.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.BillsDG.ThemeStyle.RowsStyle.Height = 24;
-            this.BillsDG.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.BillsDG.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.PhoneNumberTextbox.AutoRoundedCorners = true;
+            this.PhoneNumberTextbox.BorderRadius = 21;
+            this.PhoneNumberTextbox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.PhoneNumberTextbox.DefaultText = "";
+            this.PhoneNumberTextbox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.PhoneNumberTextbox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.PhoneNumberTextbox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.PhoneNumberTextbox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.PhoneNumberTextbox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.PhoneNumberTextbox.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.PhoneNumberTextbox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.PhoneNumberTextbox.Location = new System.Drawing.Point(30, 65);
+            this.PhoneNumberTextbox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.PhoneNumberTextbox.Name = "PhoneNumberTextbox";
+            this.PhoneNumberTextbox.PasswordChar = '\0';
+            this.PhoneNumberTextbox.PlaceholderText = "Tìm khách hàng theo số điện thoại";
+            this.PhoneNumberTextbox.SelectedText = "";
+            this.PhoneNumberTextbox.Size = new System.Drawing.Size(678, 44);
+            this.PhoneNumberTextbox.TabIndex = 16;
             // 
-            // guna2TextBox1
+            // SearchCustomerBtn
             // 
-            this.guna2TextBox1.AutoRoundedCorners = true;
-            this.guna2TextBox1.BorderRadius = 21;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Location = new System.Drawing.Point(30, 65);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderText = "Tìm khách hàng theo số điện thoại";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(678, 44);
-            this.guna2TextBox1.TabIndex = 16;
+            this.SearchCustomerBtn.AutoRoundedCorners = true;
+            this.SearchCustomerBtn.BorderRadius = 19;
+            this.SearchCustomerBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.SearchCustomerBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.SearchCustomerBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.SearchCustomerBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.SearchCustomerBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.SearchCustomerBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
+            this.SearchCustomerBtn.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SearchCustomerBtn.ForeColor = System.Drawing.Color.White;
+            this.SearchCustomerBtn.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(70)))), ((int)(((byte)(97)))));
+            this.SearchCustomerBtn.Location = new System.Drawing.Point(714, 65);
+            this.SearchCustomerBtn.Name = "SearchCustomerBtn";
+            this.SearchCustomerBtn.Size = new System.Drawing.Size(134, 41);
+            this.SearchCustomerBtn.TabIndex = 15;
+            this.SearchCustomerBtn.Text = "Tìm";
+            this.SearchCustomerBtn.Click += new System.EventHandler(this.SearchCustomerBtn_Click);
             // 
-            // guna2Button1
+            // UpdateCustomerBtn
             // 
-            this.guna2Button1.AutoRoundedCorners = true;
-            this.guna2Button1.BorderRadius = 19;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(70)))), ((int)(((byte)(97)))));
-            this.guna2Button1.Location = new System.Drawing.Point(714, 65);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(134, 41);
-            this.guna2Button1.TabIndex = 15;
-            this.guna2Button1.Text = "Tìm";
+            this.UpdateCustomerBtn.AutoRoundedCorners = true;
+            this.UpdateCustomerBtn.BorderRadius = 21;
+            this.UpdateCustomerBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.UpdateCustomerBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.UpdateCustomerBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.UpdateCustomerBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.UpdateCustomerBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.UpdateCustomerBtn.Enabled = false;
+            this.UpdateCustomerBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
+            this.UpdateCustomerBtn.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UpdateCustomerBtn.ForeColor = System.Drawing.Color.White;
+            this.UpdateCustomerBtn.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(70)))), ((int)(((byte)(97)))));
+            this.UpdateCustomerBtn.Location = new System.Drawing.Point(914, 191);
+            this.UpdateCustomerBtn.Name = "UpdateCustomerBtn";
+            this.UpdateCustomerBtn.Size = new System.Drawing.Size(182, 45);
+            this.UpdateCustomerBtn.TabIndex = 15;
+            this.UpdateCustomerBtn.Text = "Sửa KH";
+            this.UpdateCustomerBtn.Click += new System.EventHandler(this.UpdateCustomerBtn_Click);
             // 
-            // guna2Button2
+            // DeleteCustomerBtn
             // 
-            this.guna2Button2.AutoRoundedCorners = true;
-            this.guna2Button2.BorderRadius = 21;
-            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
-            this.guna2Button2.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(70)))), ((int)(((byte)(97)))));
-            this.guna2Button2.Location = new System.Drawing.Point(914, 191);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(182, 45);
-            this.guna2Button2.TabIndex = 15;
-            this.guna2Button2.Text = "Sửa KH";
+            this.DeleteCustomerBtn.AutoRoundedCorners = true;
+            this.DeleteCustomerBtn.BorderRadius = 21;
+            this.DeleteCustomerBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.DeleteCustomerBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.DeleteCustomerBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.DeleteCustomerBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.DeleteCustomerBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.DeleteCustomerBtn.Enabled = false;
+            this.DeleteCustomerBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
+            this.DeleteCustomerBtn.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeleteCustomerBtn.ForeColor = System.Drawing.Color.White;
+            this.DeleteCustomerBtn.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(70)))), ((int)(((byte)(97)))));
+            this.DeleteCustomerBtn.Location = new System.Drawing.Point(914, 255);
+            this.DeleteCustomerBtn.Name = "DeleteCustomerBtn";
+            this.DeleteCustomerBtn.Size = new System.Drawing.Size(182, 45);
+            this.DeleteCustomerBtn.TabIndex = 15;
+            this.DeleteCustomerBtn.Text = "Xoá KH";
+            this.DeleteCustomerBtn.Click += new System.EventHandler(this.DeleteCustomerBtn_Click);
             // 
-            // guna2Button3
+            // CustomersDG
             // 
-            this.guna2Button3.AutoRoundedCorners = true;
-            this.guna2Button3.BorderRadius = 21;
-            this.guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
-            this.guna2Button3.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button3.ForeColor = System.Drawing.Color.White;
-            this.guna2Button3.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(70)))), ((int)(((byte)(97)))));
-            this.guna2Button3.Location = new System.Drawing.Point(914, 255);
-            this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.Size = new System.Drawing.Size(182, 45);
-            this.guna2Button3.TabIndex = 15;
-            this.guna2Button3.Text = "Xoá KH";
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.CustomersDG.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.CustomersDG.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.CustomersDG.ColumnHeadersHeight = 20;
+            this.CustomersDG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.CustomersDG.DefaultCellStyle = dataGridViewCellStyle3;
+            this.CustomersDG.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.CustomersDG.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.CustomersDG.Location = new System.Drawing.Point(30, 116);
+            this.CustomersDG.Name = "CustomersDG";
+            this.CustomersDG.RowHeadersVisible = false;
+            this.CustomersDG.RowHeadersWidth = 51;
+            this.CustomersDG.RowTemplate.Height = 24;
+            this.CustomersDG.Size = new System.Drawing.Size(818, 411);
+            this.CustomersDG.TabIndex = 22;
+            this.CustomersDG.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.CustomersDG.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.CustomersDG.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.CustomersDG.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.CustomersDG.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.CustomersDG.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.CustomersDG.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.CustomersDG.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.CustomersDG.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.CustomersDG.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CustomersDG.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.CustomersDG.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.CustomersDG.ThemeStyle.HeaderStyle.Height = 20;
+            this.CustomersDG.ThemeStyle.ReadOnly = false;
+            this.CustomersDG.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.CustomersDG.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.CustomersDG.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CustomersDG.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.CustomersDG.ThemeStyle.RowsStyle.Height = 24;
+            this.CustomersDG.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.CustomersDG.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.CustomersDG.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CustomersDG_CellClick);
             // 
             // UC_Customers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.guna2TextBox1);
-            this.Controls.Add(this.guna2Button1);
-            this.Controls.Add(this.guna2Button3);
-            this.Controls.Add(this.guna2Button2);
-            this.Controls.Add(this.TableSetBtn);
-            this.Controls.Add(this.BillsDG);
+            this.Controls.Add(this.CustomersDG);
+            this.Controls.Add(this.PhoneNumberTextbox);
+            this.Controls.Add(this.SearchCustomerBtn);
+            this.Controls.Add(this.DeleteCustomerBtn);
+            this.Controls.Add(this.UpdateCustomerBtn);
+            this.Controls.Add(this.InsertCustomerBtn);
             this.Name = "UC_Customers";
             this.Size = new System.Drawing.Size(1147, 560);
-            ((System.ComponentModel.ISupportInitialize)(this.BillsDG)).EndInit();
+            this.Load += new System.EventHandler(this.UC_Customers_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.CustomersDG)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private Guna.UI2.WinForms.Guna2Button TableSetBtn;
-        private Guna.UI2.WinForms.Guna2DataGridView BillsDG;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
-        private Guna.UI2.WinForms.Guna2Button guna2Button3;
+        private Guna.UI2.WinForms.Guna2Button InsertCustomerBtn;
+        private Guna.UI2.WinForms.Guna2TextBox PhoneNumberTextbox;
+        private Guna.UI2.WinForms.Guna2Button SearchCustomerBtn;
+        private Guna.UI2.WinForms.Guna2Button UpdateCustomerBtn;
+        private Guna.UI2.WinForms.Guna2Button DeleteCustomerBtn;
+        private Guna.UI2.WinForms.Guna2DataGridView CustomersDG;
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RestaurantManager.DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,13 @@ namespace RestaurantManager.GUI.UserControls
         public UC_MaterialPurchase()
         {
             InitializeComponent();
+        }
+        string ErrMsg = null;
+        MaterialPurchaseDAO materialPurchaseDAO = new MaterialPurchaseDAO();
+
+        private void UC_MaterialPurchase_Load(object sender, EventArgs e)
+        {
+            MaterialPurchasesDG.DataSource = materialPurchaseDAO.GetAll(ref ErrMsg);
         }
     }
 }

@@ -37,7 +37,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.guna2ComboBox2 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.TablesIDCB = new Guna.UI2.WinForms.Guna2ComboBox();
             this.TotalTextbox = new Guna.UI2.WinForms.Guna2TextBox();
             this.AddBillBtn = new Guna.UI2.WinForms.Guna2Button();
             this.QuantityTextbox = new Guna.UI2.WinForms.Guna2TextBox();
@@ -47,7 +47,7 @@
             this.QuantityColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PriceColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label5 = new System.Windows.Forms.Label();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.DeleteBtn = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.ProductListDG)).BeginInit();
             this.SuspendLayout();
             // 
@@ -139,27 +139,22 @@
             this.label3.TabIndex = 1;
             this.label3.Text = "Số bàn";
             // 
-            // guna2ComboBox2
+            // TablesIDCB
             // 
-            this.guna2ComboBox2.AutoRoundedCorners = true;
-            this.guna2ComboBox2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox2.BorderRadius = 17;
-            this.guna2ComboBox2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox2.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox2.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.guna2ComboBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.guna2ComboBox2.ItemHeight = 30;
-            this.guna2ComboBox2.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4"});
-            this.guna2ComboBox2.Location = new System.Drawing.Point(227, 453);
-            this.guna2ComboBox2.Name = "guna2ComboBox2";
-            this.guna2ComboBox2.Size = new System.Drawing.Size(88, 36);
-            this.guna2ComboBox2.TabIndex = 9;
+            this.TablesIDCB.AutoRoundedCorners = true;
+            this.TablesIDCB.BackColor = System.Drawing.Color.Transparent;
+            this.TablesIDCB.BorderRadius = 17;
+            this.TablesIDCB.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.TablesIDCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.TablesIDCB.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TablesIDCB.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TablesIDCB.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.TablesIDCB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.TablesIDCB.ItemHeight = 30;
+            this.TablesIDCB.Location = new System.Drawing.Point(227, 453);
+            this.TablesIDCB.Name = "TablesIDCB";
+            this.TablesIDCB.Size = new System.Drawing.Size(88, 36);
+            this.TablesIDCB.TabIndex = 9;
             // 
             // TotalTextbox
             // 
@@ -322,40 +317,37 @@
             this.label5.TabIndex = 1;
             this.label5.Text = "Tổng tiền";
             // 
-            // guna2Button1
+            // DeleteBtn
             // 
-            this.guna2Button1.AutoRoundedCorners = true;
-            this.guna2Button1.BorderRadius = 17;
-            this.guna2Button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.Enabled = false;
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(70)))), ((int)(((byte)(97)))));
-            this.guna2Button1.Location = new System.Drawing.Point(580, 167);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(127, 36);
-            this.guna2Button1.TabIndex = 6;
-            this.guna2Button1.Text = "Xoá";
-            this.guna2Button1.Click += new System.EventHandler(this.AddProductBtn_Click);
+            this.DeleteBtn.AutoRoundedCorners = true;
+            this.DeleteBtn.BorderRadius = 16;
+            this.DeleteBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.DeleteBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.DeleteBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.DeleteBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.DeleteBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
+            this.DeleteBtn.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
+            this.DeleteBtn.ForeColor = System.Drawing.Color.White;
+            this.DeleteBtn.Location = new System.Drawing.Point(580, 167);
+            this.DeleteBtn.Name = "DeleteBtn";
+            this.DeleteBtn.Size = new System.Drawing.Size(127, 35);
+            this.DeleteBtn.TabIndex = 13;
+            this.DeleteBtn.Text = "Xoá";
+            this.DeleteBtn.Click += new System.EventHandler(this.DeleteBtn_Click);
             // 
             // AddBillsSubForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(956, 535);
+            this.Controls.Add(this.DeleteBtn);
             this.Controls.Add(this.ProductListDG);
             this.Controls.Add(this.QuantityTextbox);
             this.Controls.Add(this.TotalTextbox);
-            this.Controls.Add(this.guna2ComboBox2);
+            this.Controls.Add(this.TablesIDCB);
             this.Controls.Add(this.guna2TextBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.AddBillBtn);
-            this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.AddProductBtn);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label4);
@@ -363,7 +355,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ProductsCB);
             this.Name = "AddBillsSubForm";
-            this.Text = "Thêm hoá đơn";
+            this.Text = " ";
             this.Load += new System.EventHandler(this.AddBillsSubForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ProductListDG)).EndInit();
             this.ResumeLayout(false);
@@ -379,7 +371,7 @@
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private System.Windows.Forms.Label label3;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox2;
+        private Guna.UI2.WinForms.Guna2ComboBox TablesIDCB;
         private Guna.UI2.WinForms.Guna2TextBox TotalTextbox;
         private Guna.UI2.WinForms.Guna2Button AddBillBtn;
         private Guna.UI2.WinForms.Guna2TextBox QuantityTextbox;
@@ -389,6 +381,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn QuantityColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn PriceColumn;
         private System.Windows.Forms.Label label5;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button DeleteBtn;
     }
 }

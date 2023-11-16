@@ -22,8 +22,9 @@ namespace RestaurantManager.GUI
         static BillDAO Bill_DAO = new BillDAO();
         static BillDetailsDAO BillDetails_DAO = new BillDetailsDAO();
 
-        static string Msg = "";
-        DataTable ProductsDT = productDAO.GetAll(ref Msg);
+        static string ErrMsg = null;
+        DataTable ProductsDT = productDAO.GetAll(ref ErrMsg);
+        DataTable TablesDT = DataProvider.ExecuteQuery("SELECT * FROM BanAn", ref ErrMsg);
 
         public AddBillsSubForm()
         {
@@ -36,7 +37,7 @@ namespace RestaurantManager.GUI
             {
                Total += int.Parse(ProductListDG.Rows[i].Cells[1].Value.ToString()) * double.Parse(ProductListDG.Rows[i].Cells[2].Value.ToString());
             }
-             TotalTextbox.Text = Total.ToString();
+            TotalTextbox.Text = Total.ToString();
         }
 
         private void AddBillsSubForm_Load(object sender, EventArgs e)
@@ -45,6 +46,11 @@ namespace RestaurantManager.GUI
             foreach (DataRow Row in ProductsDT.Rows)
             {
                 ProductsCB.Items.Add(Row[1]);
+            }
+            // load tables to combobox
+            foreach (DataRow Row in TablesDT.Rows)
+            {
+                TablesIDCB.Items.Add(Row[0]);
             }
         }
 
@@ -78,28 +84,40 @@ namespace RestaurantManager.GUI
             {
                 return;
             }
-            // add to Bill and BillDetail
-            Bill_DAO.Insert(new BillDTO(1, 1, 1), ref Msg);
-            if (Msg != "") { MessageBox.Show(Msg); }
-            
+            // add Bill to DB
+
+            Bill_DAO.Insert(new BillDTO(0, DateTime.Now, "", 0, 1, 1, 1), ref ErrMsg);
+            ShowMessage.CheckAndShowErr(ref ErrMsg);
+
+            // add Billdetail to DB
             int Quantity;
             string ProductName;
             for (int i = 0; i < ProductListDG.Rows.Count - 1; i++)
             {
                 Quantity = int.Parse(ProductListDG.Rows[i].Cells[1].Value.ToString());
                 ProductName = ProductListDG.Rows[i].Cells[0].Value.ToString();
-                MessageBox.Show(Quantity.ToString() + ProductName);
-                BillDetails_DAO.Insert(DataProvider.NextID("HoaDon"), ProductName, Quantity, ref Msg);
+                BillDetails_DAO.Insert(DataProvider.NextID("HoaDon"), ProductName, Quantity, ref ErrMsg);
+                ShowMessage.CheckAndShowErr(ref ErrMsg);
             }
-            if(Msg != "")
-            {
-                MessageBox.Show(Msg);
-            }
+            // update the bills total
+                // get the CustomerID from phone number
+                // Update the table state
+            Bill_DAO.Update(new BillDTO(DataProvider.NextID("HoaDon"), DateTime.Now,"Chưa thanh toán", 
+                float.Parse(TotalTextbox.Text.ToString()), 1, 1, int.Parse(TablesIDCB.Text.ToString())),
+                ref ErrMsg);
+            if (ShowMessage.CheckAndShowErr(ref ErrMsg)) { MessageBox.Show("Thêm hoá đơn thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information); }
         }
 
         private void ProductListDG_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            DeleteBtn.Enabled = true;
+        }
 
+        private void DeleteBtn_Click(object sender, EventArgs e)
+        {
+            ProductListDG.Rows.RemoveAt(ProductListDG.SelectedRows[0].Index);
+            UpdateTotal();
+            DeleteBtn.Enabled = false;
         }
     }
 }

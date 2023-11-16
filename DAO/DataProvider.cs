@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace RestaurantManager.DAO
 {
@@ -87,7 +88,17 @@ namespace RestaurantManager.DAO
                 }
             }
             catch(Exception e) { ErrMsg = e.Message;}
-            finally { CloseConnection(); }
+            finally 
+            {
+                Connection.InfoMessage += delegate (object sender, SqlInfoMessageEventArgs e)
+                {
+                    //if(e.Message != "")
+                    //{
+                    //}
+                       // MessageBox.Show(e.Message);
+                };
+                CloseConnection(); 
+            }
             return rowsAffected;
         }
         public static object ExecuteScalar(string Query, ref string ErrMsg, object[] ParameterValues = null)
