@@ -57,14 +57,14 @@
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.White;
+            this.guna2Panel1.Controls.Add(this.TableTabBtn);
             this.guna2Panel1.Controls.Add(this.MaterialPurchaseTabBtn);
+            this.guna2Panel1.Controls.Add(this.BillTabBtn);
             this.guna2Panel1.Controls.Add(this.EmployeeTabBtn);
             this.guna2Panel1.Controls.Add(this.CustomerTabBtn);
-            this.guna2Panel1.Controls.Add(this.BillTabBtn);
             this.guna2Panel1.Controls.Add(this.guna2Button6);
             this.guna2Panel1.Controls.Add(this.ProductTagBtn);
             this.guna2Panel1.Controls.Add(this.MaterialTabBtn);
-            this.guna2Panel1.Controls.Add(this.TableTabBtn);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 50);
             this.guna2Panel1.Name = "guna2Panel1";
@@ -168,7 +168,7 @@
             this.BillTabBtn.Image = global::RestaurantManager.Properties.Resources.bill;
             this.BillTabBtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.BillTabBtn.ImageSize = new System.Drawing.Size(22, 22);
-            this.BillTabBtn.Location = new System.Drawing.Point(3, 60);
+            this.BillTabBtn.Location = new System.Drawing.Point(3, 0);
             this.BillTabBtn.Name = "BillTabBtn";
             this.BillTabBtn.Size = new System.Drawing.Size(211, 60);
             this.BillTabBtn.TabIndex = 0;
@@ -269,7 +269,7 @@
             this.TableTabBtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.TableTabBtn.ImageSize = new System.Drawing.Size(22, 22);
             this.TableTabBtn.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.TableTabBtn.Location = new System.Drawing.Point(3, 0);
+            this.TableTabBtn.Location = new System.Drawing.Point(3, 60);
             this.TableTabBtn.Name = "TableTabBtn";
             this.TableTabBtn.Size = new System.Drawing.Size(211, 60);
             this.TableTabBtn.TabIndex = 0;

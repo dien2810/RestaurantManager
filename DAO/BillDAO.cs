@@ -87,5 +87,36 @@ namespace RestaurantManager.DAO
             query = "SELECT * FROM FUNC_HoaDonTheoNgayThangNam('" + Date.Date.ToString("yyyy-MM-dd HH:mm:ss.fff") + "')";
             return DataProvider.ExecuteQuery(query, ref ErrMsg);
         }
+
+        public DataTable GetRevenueForYear(DateTime Date, ref string ErrMsg)
+        {
+            query = "SELECT dbo.[FUNC_TinhDoanhThuTheoNam]('" + Date.Date.ToString("yyyy-MM-dd HH:mm:ss.fff") + "')";
+            return DataProvider.ExecuteQuery(query, ref ErrMsg);
+        }
+        public DataTable GetRevenueForMonth(DateTime Date, ref string ErrMsg)
+        {
+            query = "SELECT dbo.[FUNC_TinhDoanhThuTheoThang]('" + Date.Date.ToString("yyyy-MM-dd HH:mm:ss.fff") + "')";
+            return DataProvider.ExecuteQuery(query, ref ErrMsg);
+        }
+        public DataTable GetRevenueForDay(DateTime Date, ref string ErrMsg)
+        {
+            query = "SELECT dbo.[FUNC_TinhDoanhThuTheoNgay]('" + Date.Date.ToString("yyyy-MM-dd HH:mm:ss.fff") + "')";
+            return DataProvider.ExecuteQuery(query, ref ErrMsg);
+        }
+        public DataTable GetExpenseForYear(DateTime Date, ref string ErrMsg)
+        {
+            query = "SELECT dbo.[FUNC_TinhChiPhiTheoNam]('" + Date.Date.ToString("yyyy-MM-dd HH:mm:ss.fff") + "')";
+            return DataProvider.ExecuteQuery(query, ref ErrMsg);
+        }
+        public DataTable GetExpenseForMonth(DateTime Date, ref string ErrMsg)
+        {
+            query = "SELECT dbo.[FUNC_TinhChiPhiTheoThang]('" + Date.Date.ToString("yyyy-MM-dd HH:mm:ss.fff") + "')";
+            return DataProvider.ExecuteQuery(query, ref ErrMsg);
+        }
+        public DataTable GetExpenseForDay(DateTime Date, ref string ErrMsg)
+        {
+            query = "SELECT dbo.[FUNC_TinhChiPhiTheoNgay]('" + Date.Date.ToString("yyyy-MM-dd HH:mm:ss.fff") + "')";
+            return DataProvider.ExecuteQuery(query, ref ErrMsg);
+        }
     }
 }

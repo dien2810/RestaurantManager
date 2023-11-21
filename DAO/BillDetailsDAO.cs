@@ -18,5 +18,10 @@ namespace RestaurantManager.DAO
                 BillID, ProductName, Quantity
             });
         }
+        public DataTable GetAllByBillID(int BillID, ref string  ErrMsg)
+        {
+            query = "SELECT * FROM FUNC_TimKiemCTHoaDonTheoMaHD( @MaHD )";
+            return DataProvider.ExecuteQuery(query, ref ErrMsg, new object[] { BillID });
+        }
     }
 }

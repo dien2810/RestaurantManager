@@ -47,8 +47,7 @@ namespace RestaurantManager.GUI
                 GenderCB.Text,
                 Customer_DTO.Points
                 ), ref ErrMsg);
-            ShowMessage.CheckAndShowErr(ref ErrMsg);
-            if (ErrMsg == null) { MessageBox.Show("Cập nhật khách hàng thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information); }
+            if (ShowMessage.CheckAndShowErr(ref ErrMsg)) { MessageBox.Show("Cập nhật khách hàng thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information); }
         }
     }
 }

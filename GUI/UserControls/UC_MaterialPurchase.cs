@@ -24,5 +24,15 @@ namespace RestaurantManager.GUI.UserControls
         {
             MaterialPurchasesDG.DataSource = materialPurchaseDAO.GetAll(ref ErrMsg);
         }
+
+        private void DeletePurchaseBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AddMPBtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

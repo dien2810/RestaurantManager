@@ -48,6 +48,7 @@
             this.PriceColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label5 = new System.Windows.Forms.Label();
             this.DeleteBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ProductListDG)).BeginInit();
             this.SuspendLayout();
             // 
@@ -335,11 +336,23 @@
             this.DeleteBtn.Text = "Xoá";
             this.DeleteBtn.Click += new System.EventHandler(this.DeleteBtn_Click);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Blue;
+            this.label6.Location = new System.Drawing.Point(331, 30);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(303, 33);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "THÊM HOÁ ĐƠN MỚI";
+            // 
             // AddBillsSubForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(956, 535);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.DeleteBtn);
             this.Controls.Add(this.ProductListDG);
             this.Controls.Add(this.QuantityTextbox);
@@ -355,7 +368,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ProductsCB);
             this.Name = "AddBillsSubForm";
-            this.Text = " ";
+            this.Text = " Thêm hoá đơn";
             this.Load += new System.EventHandler(this.AddBillsSubForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ProductListDG)).EndInit();
             this.ResumeLayout(false);
@@ -382,5 +395,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn PriceColumn;
         private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2Button DeleteBtn;
+        private System.Windows.Forms.Label label6;
     }
 }

@@ -31,8 +31,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.NameSearchTextbox = new Guna.UI2.WinForms.Guna2TextBox();
+            this.SearchByNameBtn = new Guna.UI2.WinForms.Guna2Button();
             this.DeleteEmployeeBtn = new Guna.UI2.WinForms.Guna2Button();
             this.UpdateEmployeeBtn = new Guna.UI2.WinForms.Guna2Button();
             this.TableSetBtn = new Guna.UI2.WinForms.Guna2Button();
@@ -40,46 +40,47 @@
             ((System.ComponentModel.ISupportInitialize)(this.EmployeesDG)).BeginInit();
             this.SuspendLayout();
             // 
-            // guna2TextBox1
+            // NameSearchTextbox
             // 
-            this.guna2TextBox1.AutoRoundedCorners = true;
-            this.guna2TextBox1.BorderRadius = 20;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Location = new System.Drawing.Point(30, 66);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderText = "Tìm nhân viên theo tên";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(678, 43);
-            this.guna2TextBox1.TabIndex = 22;
+            this.NameSearchTextbox.AutoRoundedCorners = true;
+            this.NameSearchTextbox.BorderRadius = 20;
+            this.NameSearchTextbox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.NameSearchTextbox.DefaultText = "";
+            this.NameSearchTextbox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.NameSearchTextbox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.NameSearchTextbox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.NameSearchTextbox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.NameSearchTextbox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.NameSearchTextbox.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.NameSearchTextbox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.NameSearchTextbox.Location = new System.Drawing.Point(30, 66);
+            this.NameSearchTextbox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.NameSearchTextbox.Name = "NameSearchTextbox";
+            this.NameSearchTextbox.PasswordChar = '\0';
+            this.NameSearchTextbox.PlaceholderText = "Tìm nhân viên theo tên";
+            this.NameSearchTextbox.SelectedText = "";
+            this.NameSearchTextbox.Size = new System.Drawing.Size(678, 43);
+            this.NameSearchTextbox.TabIndex = 22;
             // 
-            // guna2Button1
+            // SearchByNameBtn
             // 
-            this.guna2Button1.AutoRoundedCorners = true;
-            this.guna2Button1.BorderRadius = 19;
-            this.guna2Button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(70)))), ((int)(((byte)(97)))));
-            this.guna2Button1.Location = new System.Drawing.Point(714, 66);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(134, 40);
-            this.guna2Button1.TabIndex = 18;
-            this.guna2Button1.Text = "Tìm";
+            this.SearchByNameBtn.AutoRoundedCorners = true;
+            this.SearchByNameBtn.BorderRadius = 19;
+            this.SearchByNameBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.SearchByNameBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.SearchByNameBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.SearchByNameBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.SearchByNameBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.SearchByNameBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
+            this.SearchByNameBtn.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SearchByNameBtn.ForeColor = System.Drawing.Color.White;
+            this.SearchByNameBtn.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(70)))), ((int)(((byte)(97)))));
+            this.SearchByNameBtn.Location = new System.Drawing.Point(714, 66);
+            this.SearchByNameBtn.Name = "SearchByNameBtn";
+            this.SearchByNameBtn.Size = new System.Drawing.Size(134, 40);
+            this.SearchByNameBtn.TabIndex = 18;
+            this.SearchByNameBtn.Text = "Tìm";
+            this.SearchByNameBtn.Click += new System.EventHandler(this.SearchByNameBtn_Click);
             // 
             // DeleteEmployeeBtn
             // 
@@ -121,6 +122,7 @@
             this.UpdateEmployeeBtn.Size = new System.Drawing.Size(182, 45);
             this.UpdateEmployeeBtn.TabIndex = 20;
             this.UpdateEmployeeBtn.Text = "Sửa NV";
+            this.UpdateEmployeeBtn.Click += new System.EventHandler(this.UpdateEmployeeBtn_Click);
             // 
             // TableSetBtn
             // 
@@ -201,8 +203,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.EmployeesDG);
-            this.Controls.Add(this.guna2TextBox1);
-            this.Controls.Add(this.guna2Button1);
+            this.Controls.Add(this.NameSearchTextbox);
+            this.Controls.Add(this.SearchByNameBtn);
             this.Controls.Add(this.DeleteEmployeeBtn);
             this.Controls.Add(this.UpdateEmployeeBtn);
             this.Controls.Add(this.TableSetBtn);
@@ -216,8 +218,8 @@
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2TextBox NameSearchTextbox;
+        private Guna.UI2.WinForms.Guna2Button SearchByNameBtn;
         private Guna.UI2.WinForms.Guna2Button DeleteEmployeeBtn;
         private Guna.UI2.WinForms.Guna2Button UpdateEmployeeBtn;
         private Guna.UI2.WinForms.Guna2Button TableSetBtn;

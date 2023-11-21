@@ -22,10 +22,18 @@ namespace RestaurantManager.GUI.UserControls
         string ErrMsg = null;
         BillDAO Bill_DAO = new BillDAO();
         BillDTO Bill_DTO;
+        public SetParameterValueDelegate SetParameterValueCallback;
 
+
+        private int GetTheSelectedBillID()
+        {
+            int selectedRowIndex = BillsDG.SelectedCells[0].RowIndex;
+            DataGridViewRow selectedRow = BillsDG.Rows[selectedRowIndex];
+            return Convert.ToInt16(selectedRow.Cells[0].Value);
+        }
         private void UC_Bills_Load(object sender, EventArgs e)
         {
-            BillsDG.DataSource = Bill_DAO.GetAllUnPaidBills(ref ErrMsg);
+            BillsDG.DataSource = Bill_DAO.GetAll(ref ErrMsg);
             TimeUnitCB.Text = "--Chọn--";
         }
 
@@ -43,9 +51,7 @@ namespace RestaurantManager.GUI.UserControls
         private void PayBtn_Click(object sender, EventArgs e)
         {
             // get the BillID
-            int selectedRowIndex = BillsDG.SelectedCells[0].RowIndex;
-            DataGridViewRow selectedRow = BillsDG.Rows[selectedRowIndex];
-            int selectedBillID = Convert.ToInt16(selectedRow.Cells[0].Value);
+            int selectedBillID = GetTheSelectedBillID();
 
             // get the Bill by the ID
             Bill_DTO = Bill_DAO.GetOne(selectedBillID, ref ErrMsg);
@@ -53,15 +59,14 @@ namespace RestaurantManager.GUI.UserControls
             
 
             Bill_DAO.Update(Bill_DTO, ref ErrMsg);
-            ShowMessage.CheckAndShowErr(ref ErrMsg);
-            if (ErrMsg == null) { MessageBox.Show("Thanh toán hoá đơn thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information); }
+            
+            if (ShowMessage.CheckAndShowErr(ref ErrMsg)) { MessageBox.Show("Thanh toán hoá đơn thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information); }
             UC_Bills_Load(sender, e);
         }
 
         private void BillsDG_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             PayBtn.Enabled = true;
-            UpdateBillBtn.Enabled = true;
             DeleteBillBtn.Enabled = true;
             BillDetailsBtn.Enabled = true;
         }
@@ -91,7 +96,25 @@ namespace RestaurantManager.GUI.UserControls
 
         private void BillDetailsBtn_Click(object sender, EventArgs e)
         {
+            // get the BillID
+            int selectedBillID = GetTheSelectedBillID();
 
+            BillDetailsSubForm billDetailsSubForm = new BillDetailsSubForm();
+            SetParameterValueCallback += new SetParameterValueDelegate(billDetailsSubForm.FillTheInfo);
+            SetParameterValueCallback(selectedBillID);
+            billDetailsSubForm.ShowDialog();
+        }
+
+        private void DeleteBillBtn_Click(object sender, EventArgs e)
+        {
+            // get the BillID
+            int selectedBillID = GetTheSelectedBillID();
+            
+            // delete the bill
+            Bill_DAO.Delete(selectedBillID, ref ErrMsg);
+
+            if (ShowMessage.CheckAndShowErr(ref ErrMsg)) { MessageBox.Show("Xoá hoá đơn thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information); }
+            UC_Bills_Load(sender, e);
         }
     }
 }

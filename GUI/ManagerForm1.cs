@@ -1,4 +1,5 @@
-﻿using RestaurantManager.GUI.UserControls;
+﻿using RestaurantManager.DAO;
+using RestaurantManager.GUI.UserControls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -29,7 +30,9 @@ namespace RestaurantManager.GUI
         {
             UC_Tables UC = new UC_Tables();
             addUserControl(UC);
-            TableTabBtn.Checked = true;
+            BillTabBtn.Checked = true;
+            MessageBox.Show(DataProvider.Username);
+            
         }
 
         private void TableTabBtn_Click(object sender, EventArgs e)
@@ -64,7 +67,8 @@ namespace RestaurantManager.GUI
 
         private void ProductTagBtn_Click(object sender, EventArgs e)
         {
-           
+           UC_SalesMetrics UC = new UC_SalesMetrics();
+            addUserControl(UC);
         }
 
         private void MaterialTabBtn_Click(object sender, EventArgs e)

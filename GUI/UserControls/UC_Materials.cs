@@ -47,7 +47,7 @@ namespace RestaurantManager.GUI.UserControls
             DataGridViewRow selectedRow = MaterialsDG.Rows[selectedRowIndex];
             int selectedMaterialID = Convert.ToInt16(selectedRow.Cells[0].Value);
             // confirm box here
-            if (ShowMessage.ConfirmationBox("Bạn có chắc chắn muốn xoá khách hàng có mã " + selectedMaterialID.ToString() + "?"))
+            if (ShowMessage.ConfirmationBox("Bạn có chắc chắn muốn xoá nguyên liệu có mã " + selectedMaterialID.ToString() + "?"))
             {
                 Material_DAO.Delete(selectedMaterialID, ref ErrMsg);
 

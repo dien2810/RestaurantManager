@@ -54,11 +54,11 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Blue;
             this.label5.Location = new System.Drawing.Point(325, 50);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(316, 32);
+            this.label5.Size = new System.Drawing.Size(324, 33);
             this.label5.TabIndex = 4;
             this.label5.Text = "THÊM NHÂN VIÊN MỚI";
             // 
@@ -363,7 +363,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(727, 602);
+            this.ClientSize = new System.Drawing.Size(727, 603);
             this.Controls.Add(this.AddEmployeeBtn);
             this.Controls.Add(this.JobTitlesCB);
             this.Controls.Add(this.label9);
