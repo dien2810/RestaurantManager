@@ -30,5 +30,11 @@ namespace RestaurantManager.GUI.UserControls
             AddBillsSubForm addBillsSubForm = new AddBillsSubForm();
             addBillsSubForm.ShowDialog();
         }
+
+        private void TablesDG_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            ChangeTableBtn.Enabled = true;
+            PayInTablesBtn.Enabled = true;
+        }
     }
 }

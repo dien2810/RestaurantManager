@@ -69,10 +69,10 @@
   <ItemGroup>
     <Compile Include="DAO\BillDAO.cs" />
     <Compile Include="DAO\BillDetailsDAO.cs" />
-    <Compile Include="DAO\BillDetailsSubForm.cs">
+    <Compile Include="GUI\BillDetailsSubForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DAO\BillDetailsSubForm.Designer.cs">
+    <Compile Include="GUI\BillDetailsSubForm.Designer.cs">
       <DependentUpon>BillDetailsSubForm.cs</DependentUpon>
     </Compile>
     <Compile Include="DAO\CustomerDAO.cs" />
@@ -117,6 +117,12 @@
     </Compile>
     <Compile Include="GUI\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\MP_DetailsSubForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\MP_DetailsSubForm.Designer.cs">
+      <DependentUpon>MP_DetailsSubForm.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\UpdateCustomersSubForm.cs">
       <SubType>Form</SubType>
@@ -215,7 +221,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QuanLyNhaHangAnUongDataSet.xsd</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="DAO\BillDetailsSubForm.resx">
+    <EmbeddedResource Include="GUI\BillDetailsSubForm.resx">
       <DependentUpon>BillDetailsSubForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\AddBillsSubForm.resx">
@@ -238,6 +244,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\ManagerForm1.resx">
       <DependentUpon>ManagerForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\MP_DetailsSubForm.resx">
+      <DependentUpon>MP_DetailsSubForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\UpdateCustomersSubForm.resx">
       <DependentUpon>UpdateCustomersSubForm.cs</DependentUpon>

@@ -30,5 +30,10 @@ namespace RestaurantManager.DAO
             TotalTextbox.Text = DataProvider.ExecuteQuery("SELECT TriGiaHD FROM HoaDon where MaHD = " + BillID.ToString(), ref ErrMsg).Rows[0].ItemArray[0].ToString();
             ShowMessage.CheckAndShowErr(ref ErrMsg);
         }
+
+        private void BillDetailsDG_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.AddMPBtn = new Guna.UI2.WinForms.Guna2Button();
             this.MaterialPurchasesDG = new Guna.UI2.WinForms.Guna2DataGridView();
             this.SearchBtn = new Guna.UI2.WinForms.Guna2Button();
@@ -38,6 +38,7 @@
             this.DeleteMPBtn = new Guna.UI2.WinForms.Guna2Button();
             this.TimeUnitCB = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.MPDetailsBtn = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.MaterialPurchasesDG)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,38 +55,39 @@
             this.AddMPBtn.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddMPBtn.ForeColor = System.Drawing.Color.White;
             this.AddMPBtn.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(70)))), ((int)(((byte)(97)))));
-            this.AddMPBtn.Location = new System.Drawing.Point(916, 133);
+            this.AddMPBtn.Location = new System.Drawing.Point(905, 133);
             this.AddMPBtn.Name = "AddMPBtn";
-            this.AddMPBtn.Size = new System.Drawing.Size(182, 45);
+            this.AddMPBtn.Size = new System.Drawing.Size(193, 45);
             this.AddMPBtn.TabIndex = 25;
             this.AddMPBtn.Text = "Thêm ĐN";
             this.AddMPBtn.Click += new System.EventHandler(this.AddMPBtn_Click);
             // 
             // MaterialPurchasesDG
             // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.MaterialPurchasesDG.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.MaterialPurchasesDG.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.MaterialPurchasesDG.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.MaterialPurchasesDG.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.MaterialPurchasesDG.ColumnHeadersHeight = 20;
             this.MaterialPurchasesDG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.MaterialPurchasesDG.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.MaterialPurchasesDG.DefaultCellStyle = dataGridViewCellStyle3;
             this.MaterialPurchasesDG.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.MaterialPurchasesDG.Location = new System.Drawing.Point(30, 116);
             this.MaterialPurchasesDG.Name = "MaterialPurchasesDG";
+            this.MaterialPurchasesDG.ReadOnly = true;
             this.MaterialPurchasesDG.RowHeadersVisible = false;
             this.MaterialPurchasesDG.RowHeadersWidth = 51;
             this.MaterialPurchasesDG.RowTemplate.Height = 24;
@@ -104,7 +106,7 @@
             this.MaterialPurchasesDG.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.MaterialPurchasesDG.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.MaterialPurchasesDG.ThemeStyle.HeaderStyle.Height = 20;
-            this.MaterialPurchasesDG.ThemeStyle.ReadOnly = false;
+            this.MaterialPurchasesDG.ThemeStyle.ReadOnly = true;
             this.MaterialPurchasesDG.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.MaterialPurchasesDG.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.MaterialPurchasesDG.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -112,6 +114,7 @@
             this.MaterialPurchasesDG.ThemeStyle.RowsStyle.Height = 24;
             this.MaterialPurchasesDG.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.MaterialPurchasesDG.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.MaterialPurchasesDG.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.MaterialPurchasesDG_CellClick);
             // 
             // SearchBtn
             // 
@@ -157,13 +160,14 @@
             this.DeleteMPBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.DeleteMPBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.DeleteMPBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.DeleteMPBtn.Enabled = false;
             this.DeleteMPBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
             this.DeleteMPBtn.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DeleteMPBtn.ForeColor = System.Drawing.Color.White;
             this.DeleteMPBtn.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(70)))), ((int)(((byte)(97)))));
-            this.DeleteMPBtn.Location = new System.Drawing.Point(916, 193);
+            this.DeleteMPBtn.Location = new System.Drawing.Point(905, 258);
             this.DeleteMPBtn.Name = "DeleteMPBtn";
-            this.DeleteMPBtn.Size = new System.Drawing.Size(182, 45);
+            this.DeleteMPBtn.Size = new System.Drawing.Size(193, 45);
             this.DeleteMPBtn.TabIndex = 25;
             this.DeleteMPBtn.Text = "Xoá ĐN";
             this.DeleteMPBtn.Click += new System.EventHandler(this.DeletePurchaseBtn_Click);
@@ -198,10 +202,32 @@
             this.label5.TabIndex = 29;
             this.label5.Text = "ĐƠN NHẬP";
             // 
+            // MPDetailsBtn
+            // 
+            this.MPDetailsBtn.AutoRoundedCorners = true;
+            this.MPDetailsBtn.BorderRadius = 21;
+            this.MPDetailsBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.MPDetailsBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.MPDetailsBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.MPDetailsBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.MPDetailsBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.MPDetailsBtn.Enabled = false;
+            this.MPDetailsBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
+            this.MPDetailsBtn.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MPDetailsBtn.ForeColor = System.Drawing.Color.White;
+            this.MPDetailsBtn.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(70)))), ((int)(((byte)(97)))));
+            this.MPDetailsBtn.Location = new System.Drawing.Point(905, 198);
+            this.MPDetailsBtn.Name = "MPDetailsBtn";
+            this.MPDetailsBtn.Size = new System.Drawing.Size(193, 45);
+            this.MPDetailsBtn.TabIndex = 30;
+            this.MPDetailsBtn.Text = "Xem chi tiết";
+            this.MPDetailsBtn.Click += new System.EventHandler(this.MPDetailsBtn_Click);
+            // 
             // UC_MaterialPurchase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.MPDetailsBtn);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.TimeUnitCB);
             this.Controls.Add(this.DateTimePicker);
@@ -226,5 +252,6 @@
         private Guna.UI2.WinForms.Guna2Button DeleteMPBtn;
         private Guna.UI2.WinForms.Guna2ComboBox TimeUnitCB;
         private System.Windows.Forms.Label label5;
+        private Guna.UI2.WinForms.Guna2Button MPDetailsBtn;
     }
 }

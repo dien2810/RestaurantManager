@@ -31,7 +31,6 @@ namespace RestaurantManager.GUI
             UC_Tables UC = new UC_Tables();
             addUserControl(UC);
             BillTabBtn.Checked = true;
-            MessageBox.Show(DataProvider.Username);
             
         }
 
