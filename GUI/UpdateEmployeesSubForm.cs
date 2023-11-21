@@ -61,7 +61,7 @@ namespace RestaurantManager.GUI
                 GenderCB.Text,
                 PhoneNumberTextbox.Text,
                 StartingDateTimePicker.Value,
-                JobTitlesCB.SelectedIndex + 1
+                JobTitlesCB.SelectedIndex + 1, "", ""
                ), ref ErrMsg);
             if (ShowMessage.CheckAndShowErr(ref ErrMsg)) { MessageBox.Show("Cập nhật nhân viên thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information); }
         }

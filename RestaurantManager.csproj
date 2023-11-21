@@ -202,12 +202,6 @@
     <Compile Include="GUI\UserControls\UC_Products.Designer.cs">
       <DependentUpon>UC_Products.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\UserControls\UC_Shifts.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="GUI\UserControls\UC_Shifts.Designer.cs">
-      <DependentUpon>UC_Shifts.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUI\UserControls\UC_Tables.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -232,6 +226,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\AddEmployeesSubForm.resx">
       <DependentUpon>AddEmployeesSubForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\AddMaterialPurchaseSubForm.resx">
+      <DependentUpon>AddMaterialPurchaseSubForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\AddMaterialsSubForm.resx">
       <DependentUpon>AddMaterialsSubForm.cs</DependentUpon>
@@ -271,9 +268,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\UserControls\UC_SalesMetrics.resx">
       <DependentUpon>UC_SalesMetrics.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\UserControls\UC_Shifts.resx">
-      <DependentUpon>UC_Shifts.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\UserControls\UC_Tables.resx">
       <DependentUpon>UC_Tables.cs</DependentUpon>

@@ -37,6 +37,7 @@
             this.UpdateCustomerBtn = new Guna.UI2.WinForms.Guna2Button();
             this.DeleteCustomerBtn = new Guna.UI2.WinForms.Guna2Button();
             this.CustomersDG = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.CustomersDG)).BeginInit();
             this.SuspendLayout();
             // 
@@ -198,10 +199,22 @@
             this.CustomersDG.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.CustomersDG.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CustomersDG_CellClick);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Blue;
+            this.label5.Location = new System.Drawing.Point(513, 28);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(205, 33);
+            this.label5.TabIndex = 24;
+            this.label5.Text = "KHÁCH HÀNG";
+            // 
             // UC_Customers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.CustomersDG);
             this.Controls.Add(this.PhoneNumberTextbox);
             this.Controls.Add(this.SearchCustomerBtn);
@@ -213,6 +226,7 @@
             this.Load += new System.EventHandler(this.UC_Customers_Load);
             ((System.ComponentModel.ISupportInitialize)(this.CustomersDG)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -223,5 +237,6 @@
         private Guna.UI2.WinForms.Guna2Button UpdateCustomerBtn;
         private Guna.UI2.WinForms.Guna2Button DeleteCustomerBtn;
         private Guna.UI2.WinForms.Guna2DataGridView CustomersDG;
+        private System.Windows.Forms.Label label5;
     }
 }

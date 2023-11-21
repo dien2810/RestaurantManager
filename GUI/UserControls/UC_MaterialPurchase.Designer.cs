@@ -33,9 +33,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.AddMPBtn = new Guna.UI2.WinForms.Guna2Button();
             this.MaterialPurchasesDG = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.SearchBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.DateTimePicker = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.DeleteMPBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.TimeUnitCB = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.MaterialPurchasesDG)).BeginInit();
             this.SuspendLayout();
             // 
@@ -43,6 +45,7 @@
             // 
             this.AddMPBtn.AutoRoundedCorners = true;
             this.AddMPBtn.BorderRadius = 21;
+            this.AddMPBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.AddMPBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.AddMPBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.AddMPBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -110,43 +113,46 @@
             this.MaterialPurchasesDG.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.MaterialPurchasesDG.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
-            // guna2Button1
+            // SearchBtn
             // 
-            this.guna2Button1.AutoRoundedCorners = true;
-            this.guna2Button1.BorderRadius = 19;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(70)))), ((int)(((byte)(97)))));
-            this.guna2Button1.Location = new System.Drawing.Point(714, 66);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(134, 40);
-            this.guna2Button1.TabIndex = 26;
-            this.guna2Button1.Text = "Lọc";
+            this.SearchBtn.AutoRoundedCorners = true;
+            this.SearchBtn.BorderRadius = 19;
+            this.SearchBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.SearchBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.SearchBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.SearchBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.SearchBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.SearchBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
+            this.SearchBtn.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SearchBtn.ForeColor = System.Drawing.Color.White;
+            this.SearchBtn.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(70)))), ((int)(((byte)(97)))));
+            this.SearchBtn.Location = new System.Drawing.Point(714, 66);
+            this.SearchBtn.Name = "SearchBtn";
+            this.SearchBtn.Size = new System.Drawing.Size(134, 40);
+            this.SearchBtn.TabIndex = 26;
+            this.SearchBtn.Text = "Lọc";
+            this.SearchBtn.Click += new System.EventHandler(this.SearchBtn_Click);
             // 
-            // guna2DateTimePicker1
+            // DateTimePicker
             // 
-            this.guna2DateTimePicker1.AutoRoundedCorners = true;
-            this.guna2DateTimePicker1.BorderRadius = 17;
-            this.guna2DateTimePicker1.Checked = true;
-            this.guna2DateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.guna2DateTimePicker1.Location = new System.Drawing.Point(30, 70);
-            this.guna2DateTimePicker1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.guna2DateTimePicker1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.guna2DateTimePicker1.Name = "guna2DateTimePicker1";
-            this.guna2DateTimePicker1.Size = new System.Drawing.Size(678, 36);
-            this.guna2DateTimePicker1.TabIndex = 27;
-            this.guna2DateTimePicker1.Value = new System.DateTime(2023, 11, 16, 2, 44, 41, 244);
+            this.DateTimePicker.AutoRoundedCorners = true;
+            this.DateTimePicker.BorderRadius = 17;
+            this.DateTimePicker.Checked = true;
+            this.DateTimePicker.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.DateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.DateTimePicker.Location = new System.Drawing.Point(30, 70);
+            this.DateTimePicker.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.DateTimePicker.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.DateTimePicker.Name = "DateTimePicker";
+            this.DateTimePicker.Size = new System.Drawing.Size(510, 36);
+            this.DateTimePicker.TabIndex = 27;
+            this.DateTimePicker.Value = new System.DateTime(2023, 11, 16, 2, 44, 41, 244);
             // 
             // DeleteMPBtn
             // 
             this.DeleteMPBtn.AutoRoundedCorners = true;
             this.DeleteMPBtn.BorderRadius = 21;
+            this.DeleteMPBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DeleteMPBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.DeleteMPBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.DeleteMPBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -162,12 +168,44 @@
             this.DeleteMPBtn.Text = "Xoá ĐN";
             this.DeleteMPBtn.Click += new System.EventHandler(this.DeletePurchaseBtn_Click);
             // 
+            // TimeUnitCB
+            // 
+            this.TimeUnitCB.BackColor = System.Drawing.Color.Transparent;
+            this.TimeUnitCB.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.TimeUnitCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.TimeUnitCB.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TimeUnitCB.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TimeUnitCB.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.TimeUnitCB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.TimeUnitCB.ItemHeight = 30;
+            this.TimeUnitCB.Items.AddRange(new object[] {
+            "Ngày",
+            "Tháng",
+            "Năm"});
+            this.TimeUnitCB.Location = new System.Drawing.Point(546, 70);
+            this.TimeUnitCB.Name = "TimeUnitCB";
+            this.TimeUnitCB.Size = new System.Drawing.Size(162, 36);
+            this.TimeUnitCB.TabIndex = 28;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Blue;
+            this.label5.Location = new System.Drawing.Point(481, 28);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(164, 33);
+            this.label5.TabIndex = 29;
+            this.label5.Text = "ĐƠN NHẬP";
+            // 
             // UC_MaterialPurchase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.guna2DateTimePicker1);
-            this.Controls.Add(this.guna2Button1);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.TimeUnitCB);
+            this.Controls.Add(this.DateTimePicker);
+            this.Controls.Add(this.SearchBtn);
             this.Controls.Add(this.DeleteMPBtn);
             this.Controls.Add(this.AddMPBtn);
             this.Controls.Add(this.MaterialPurchasesDG);
@@ -176,14 +214,17 @@
             this.Load += new System.EventHandler(this.UC_MaterialPurchase_Load);
             ((System.ComponentModel.ISupportInitialize)(this.MaterialPurchasesDG)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
         private Guna.UI2.WinForms.Guna2Button AddMPBtn;
         private Guna.UI2.WinForms.Guna2DataGridView MaterialPurchasesDG;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker1;
+        private Guna.UI2.WinForms.Guna2Button SearchBtn;
+        private Guna.UI2.WinForms.Guna2DateTimePicker DateTimePicker;
         private Guna.UI2.WinForms.Guna2Button DeleteMPBtn;
+        private Guna.UI2.WinForms.Guna2ComboBox TimeUnitCB;
+        private System.Windows.Forms.Label label5;
     }
 }

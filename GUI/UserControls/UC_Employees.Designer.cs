@@ -37,6 +37,7 @@
             this.UpdateEmployeeBtn = new Guna.UI2.WinForms.Guna2Button();
             this.TableSetBtn = new Guna.UI2.WinForms.Guna2Button();
             this.EmployeesDG = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.EmployeesDG)).BeginInit();
             this.SuspendLayout();
             // 
@@ -198,10 +199,22 @@
             this.EmployeesDG.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.EmployeesDG.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.EmployeesDG_CellClick);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Blue;
+            this.label5.Location = new System.Drawing.Point(504, 28);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(169, 33);
+            this.label5.TabIndex = 24;
+            this.label5.Text = "NHÂN VIÊN";
+            // 
             // UC_Employees
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.EmployeesDG);
             this.Controls.Add(this.NameSearchTextbox);
             this.Controls.Add(this.SearchByNameBtn);
@@ -213,6 +226,7 @@
             this.Load += new System.EventHandler(this.UC_Employees_Load);
             ((System.ComponentModel.ISupportInitialize)(this.EmployeesDG)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -224,5 +238,6 @@
         private Guna.UI2.WinForms.Guna2Button UpdateEmployeeBtn;
         private Guna.UI2.WinForms.Guna2Button TableSetBtn;
         private Guna.UI2.WinForms.Guna2DataGridView EmployeesDG;
+        private System.Windows.Forms.Label label5;
     }
 }

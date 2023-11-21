@@ -16,14 +16,14 @@ namespace RestaurantManager.DAO
         
         public int Insert(EmployeeDTO Employee, ref string ErrMsg)
         {
-            query = "EXEC PROC_ThemNhanVien @HoNV , @TenNV , @NgaySinh , @GioiTinh , @DiaChi , @SDT , @NgayTD , @MaNQL , @TenCV";
+            query = "EXEC PROC_ThemNhanVien @HoNV , @TenNV , @NgaySinh , @GioiTinh , @DiaChi , @SDT , @NgayTD , @MaNQL , @TenCV , @TenDangNhap , @MatKhau";
             // vì DTO của nhân viên chứa mã cv nên là sẽ từ mã cv đó get cái tên công việc, bằng cách truy vấn
             DataTable DT = DataProvider.ExecuteQuery("SELECT * FROM CongViec Where MaCV = " + Employee.JobID.ToString(), ref ErrMsg);
             string JobName = DT.Rows[0].ItemArray[1].ToString();
             return DataProvider.ExecuteNonQuery(query, ref ErrMsg, new object[]
             {
                 Employee.LastName, Employee.FirstName, Employee.BirthDate, Employee.Gender, 
-                Employee.Address, Employee.PhoneNumber, Employee.StartingDate, 1 , JobName
+                Employee.Address, Employee.PhoneNumber, Employee.StartingDate, 1 , JobName , Employee.Username, Employee.Password
             });
         }
         public int Update(EmployeeDTO Employee, ref string ErrMsg)
@@ -56,7 +56,7 @@ namespace RestaurantManager.DAO
                DT.Rows[0].ItemArray[4].ToString(),
                DT.Rows[0].ItemArray[6].ToString(),
                Convert.ToDateTime(DT.Rows[0].ItemArray[7].ToString()),
-               int.Parse(DT.Rows[0].ItemArray[9].ToString())
+               int.Parse(DT.Rows[0].ItemArray[9].ToString()), "", ""
                );
         }
         public DataTable GetAll(ref string ErrMsg)

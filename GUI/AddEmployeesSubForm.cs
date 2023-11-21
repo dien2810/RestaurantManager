@@ -32,8 +32,6 @@ namespace RestaurantManager.GUI
         private void AddEmployeeBtn_Click(object sender, EventArgs e)
         {
             string Msg = null;
-            //MessageBox.Show(JobTitlesCB.SelectedIndex.ToString());
-            //return;
             Employee_DAO.Insert( new EmployeeDTO(
                 0,
                 EmpLastNameTextbox.Text,
@@ -43,7 +41,9 @@ namespace RestaurantManager.GUI
                 GenderCB.Text,
                 PhoneNumberTextbox.Text,
                 StartingDateTimePicker.Value,
-                JobTitlesCB.SelectedIndex + 1
+                JobTitlesCB.SelectedIndex + 1,
+                UsernameTextbox.Text,
+                PasswordTextbox.Text
                 ), ref Msg);
             if (ShowMessage.CheckAndShowErr(ref Msg)) { MessageBox.Show("Thêm nhân viên thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information); }
         }

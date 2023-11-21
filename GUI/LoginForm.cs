@@ -73,7 +73,7 @@ namespace RestaurantManager.GUI
                     else
                     {
                         // Đăng nhập thất bại
-                        MessageBox.Show("Đăng nhập thất bại. Vui lòng kiểm tra lại username và password.");
+                        MessageBox.Show("Đăng nhập thất bại. Vui lòng kiểm tra lại username và password!");
                     }
                 }
             }

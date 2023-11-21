@@ -9,7 +9,7 @@ namespace RestaurantManager.DTO
 {
     internal class EmployeeDTO
     {
-        public EmployeeDTO(int ID, string LastName, string FirstName, string Address, DateTime BirthDate, string Gender, string PhoneNumber, DateTime StartingDate, int JobID) 
+        public EmployeeDTO(int ID, string LastName, string FirstName, string Address, DateTime BirthDate, string Gender, string PhoneNumber, DateTime StartingDate, int JobID, string Username, string Password) 
         { 
             this.ID = ID;
             this.FirstName = FirstName;
@@ -20,6 +20,8 @@ namespace RestaurantManager.DTO
             this.PhoneNumber = PhoneNumber;
             this.StartingDate = StartingDate;
             this.JobID = JobID;
+            this.Username = Username;
+            this.Password = Password;
         }
         public int ID { get; set; }
         public string FirstName { get; set;}
@@ -30,5 +32,7 @@ namespace RestaurantManager.DTO
         public string PhoneNumber { get; set; }
         public DateTime StartingDate { get; set; }
         public int JobID { get; set; }
+        public string Username {  get; set; }
+        public string Password { get; set; }
     }
 }

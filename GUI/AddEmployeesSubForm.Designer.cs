@@ -48,6 +48,10 @@
             this.label9 = new System.Windows.Forms.Label();
             this.JobTitlesCB = new Guna.UI2.WinForms.Guna2ComboBox();
             this.AddEmployeeBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.UsernameTextbox = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.PasswordTextbox = new Guna.UI2.WinForms.Guna2TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -318,9 +322,9 @@
             this.label9.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label9.Location = new System.Drawing.Point(44, 490);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(111, 24);
+            this.label9.Size = new System.Drawing.Size(104, 24);
             this.label9.TabIndex = 18;
-            this.label9.Text = "Công việc:";
+            this.label9.Text = "Công việc";
             // 
             // JobTitlesCB
             // 
@@ -352,20 +356,90 @@
             this.AddEmployeeBtn.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddEmployeeBtn.ForeColor = System.Drawing.Color.White;
             this.AddEmployeeBtn.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(70)))), ((int)(((byte)(97)))));
-            this.AddEmployeeBtn.Location = new System.Drawing.Point(484, 539);
+            this.AddEmployeeBtn.Location = new System.Drawing.Point(484, 633);
             this.AddEmployeeBtn.Name = "AddEmployeeBtn";
             this.AddEmployeeBtn.Size = new System.Drawing.Size(231, 41);
             this.AddEmployeeBtn.TabIndex = 21;
             this.AddEmployeeBtn.Text = "Thêm nhân viên";
             this.AddEmployeeBtn.Click += new System.EventHandler(this.AddEmployeeBtn_Click);
             // 
+            // UsernameTextbox
+            // 
+            this.UsernameTextbox.AutoRoundedCorners = true;
+            this.UsernameTextbox.BorderRadius = 14;
+            this.UsernameTextbox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.UsernameTextbox.DefaultText = "";
+            this.UsernameTextbox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.UsernameTextbox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.UsernameTextbox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.UsernameTextbox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.UsernameTextbox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.UsernameTextbox.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.UsernameTextbox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.UsernameTextbox.Location = new System.Drawing.Point(227, 534);
+            this.UsernameTextbox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.UsernameTextbox.Name = "UsernameTextbox";
+            this.UsernameTextbox.PasswordChar = '\0';
+            this.UsernameTextbox.PlaceholderText = "";
+            this.UsernameTextbox.SelectedText = "";
+            this.UsernameTextbox.Size = new System.Drawing.Size(384, 31);
+            this.UsernameTextbox.TabIndex = 22;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label10.Location = new System.Drawing.Point(46, 534);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(152, 24);
+            this.label10.TabIndex = 18;
+            this.label10.Text = "Tên đăng nhập";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label11.Location = new System.Drawing.Point(44, 576);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(97, 24);
+            this.label11.TabIndex = 18;
+            this.label11.Text = "Mật khẩu";
+            // 
+            // PasswordTextbox
+            // 
+            this.PasswordTextbox.AutoRoundedCorners = true;
+            this.PasswordTextbox.BorderRadius = 14;
+            this.PasswordTextbox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.PasswordTextbox.DefaultText = "";
+            this.PasswordTextbox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.PasswordTextbox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.PasswordTextbox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.PasswordTextbox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.PasswordTextbox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.PasswordTextbox.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.PasswordTextbox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.PasswordTextbox.Location = new System.Drawing.Point(227, 576);
+            this.PasswordTextbox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.PasswordTextbox.Name = "PasswordTextbox";
+            this.PasswordTextbox.PasswordChar = '\0';
+            this.PasswordTextbox.PlaceholderText = "";
+            this.PasswordTextbox.SelectedText = "";
+            this.PasswordTextbox.Size = new System.Drawing.Size(384, 31);
+            this.PasswordTextbox.TabIndex = 22;
+            // 
             // AddEmployeesSubForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(727, 603);
+            this.ClientSize = new System.Drawing.Size(727, 695);
+            this.Controls.Add(this.PasswordTextbox);
+            this.Controls.Add(this.UsernameTextbox);
             this.Controls.Add(this.AddEmployeeBtn);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.JobTitlesCB);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.guna2TextBox3);
             this.Controls.Add(this.label8);
@@ -415,5 +489,9 @@
         private System.Windows.Forms.Label label9;
         private Guna.UI2.WinForms.Guna2ComboBox JobTitlesCB;
         private Guna.UI2.WinForms.Guna2Button AddEmployeeBtn;
+        private Guna.UI2.WinForms.Guna2TextBox UsernameTextbox;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private Guna.UI2.WinForms.Guna2TextBox PasswordTextbox;
     }
 }
