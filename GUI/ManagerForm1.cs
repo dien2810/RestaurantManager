@@ -18,7 +18,7 @@ namespace RestaurantManager.GUI
         {
             InitializeComponent();
         }
-
+        string UserName = null;
         private void addUserControl(UserControl UC)
         {
             UC.Dock = DockStyle.Fill;
@@ -32,6 +32,10 @@ namespace RestaurantManager.GUI
             addUserControl(UC);
             BillTabBtn.Checked = true;
             
+            if(UserName != null)
+            {
+                RoleLbl.Text = "Nhân viên";
+            }
         }
 
         private void TableTabBtn_Click(object sender, EventArgs e)
@@ -74,6 +78,10 @@ namespace RestaurantManager.GUI
         {
             UC_Materials UC = new UC_Materials();
             addUserControl(UC);
+        }
+        public void GetTheRole(string role)
+        {
+             UserName = role;
         }
     }
 }

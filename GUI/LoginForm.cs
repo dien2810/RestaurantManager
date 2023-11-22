@@ -13,12 +13,14 @@ using System.Windows.Forms;
 
 namespace RestaurantManager.GUI
 {
+    public delegate void SetParameterValueDelegate(string role);
     public partial class LoginForm : Form
     {
         public LoginForm()
         {
             InitializeComponent();
         }
+        public SetParameterValueDelegate SetParameterValueCallback;
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
@@ -64,6 +66,8 @@ namespace RestaurantManager.GUI
                                 MessageBox.Show("Đăng nhập thành công với tư cách là nhân viên!");
 
                                 ManagerForm1 employeeForm = new ManagerForm1();
+                                SetParameterValueCallback += new SetParameterValueDelegate(employeeForm.GetTheRole);
+                                SetParameterValueCallback(username);
                                 employeeForm.Show();
                                 this.Hide(); // Ẩn form hiện tại
                             }

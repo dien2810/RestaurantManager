@@ -130,11 +130,11 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Blue;
             this.label5.Location = new System.Drawing.Point(300, 47);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(348, 32);
+            this.label5.Size = new System.Drawing.Size(354, 33);
             this.label5.TabIndex = 14;
             this.label5.Text = "CẬP NHẬT KHÁCH HÀNG";
             // 
