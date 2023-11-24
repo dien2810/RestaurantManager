@@ -28,9 +28,9 @@ namespace RestaurantManager.GUI
         }
         private void ManagerForm1_Load(object sender, EventArgs e)
         {
-            UC_Tables UC = new UC_Tables();
+            UC_ProductList UC = new UC_ProductList();
             addUserControl(UC);
-            BillTabBtn.Checked = true;
+            ProductsTabBtn.Checked = true;
             
             if(UserName != null)
             {
@@ -67,13 +67,6 @@ namespace RestaurantManager.GUI
             UC_MaterialPurchase UC = new UC_MaterialPurchase();
             addUserControl(UC);
         }
-
-        private void ProductTagBtn_Click(object sender, EventArgs e)
-        {
-           UC_SalesMetrics UC = new UC_SalesMetrics();
-            addUserControl(UC);
-        }
-
         private void MaterialTabBtn_Click(object sender, EventArgs e)
         {
             UC_Materials UC = new UC_Materials();
@@ -82,6 +75,18 @@ namespace RestaurantManager.GUI
         public void GetTheRole(string role)
         {
              UserName = role;
+        }
+
+        private void SalesMetricsTabBtn_Click(object sender, EventArgs e)
+        {
+            UC_SalesMetrics UC = new UC_SalesMetrics();
+            addUserControl(UC);
+        }
+
+        private void ProductsTabBtn_Click(object sender, EventArgs e)
+        {
+            UC_ProductList UC = new UC_ProductList();
+            addUserControl(UC);
         }
     }
 }

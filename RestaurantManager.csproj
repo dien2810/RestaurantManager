@@ -124,6 +124,12 @@
     <Compile Include="GUI\MP_DetailsSubForm.Designer.cs">
       <DependentUpon>MP_DetailsSubForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\ProductDetailsSubForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ProductDetailsSubForm.Designer.cs">
+      <DependentUpon>ProductDetailsSubForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\UpdateCustomersSubForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +147,18 @@
     </Compile>
     <Compile Include="GUI\UpdateMaterialsSubForm.Designer.cs">
       <DependentUpon>UpdateMaterialsSubForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UserControls\UC_ProductItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\UserControls\UC_ProductItem.Designer.cs">
+      <DependentUpon>UC_ProductItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UserControls\UC_ProductList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\UserControls\UC_ProductList.Designer.cs">
+      <DependentUpon>UC_ProductList.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\UserControls\UC_SalesMetrics.cs">
       <SubType>UserControl</SubType>
@@ -202,12 +220,6 @@
     <Compile Include="GUI\UserControls\UC_Materials.Designer.cs">
       <DependentUpon>UC_Materials.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\UserControls\UC_Products.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="GUI\UserControls\UC_Products.Designer.cs">
-      <DependentUpon>UC_Products.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUI\UserControls\UC_Tables.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -248,6 +260,9 @@
     <EmbeddedResource Include="GUI\MP_DetailsSubForm.resx">
       <DependentUpon>MP_DetailsSubForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ProductDetailsSubForm.resx">
+      <DependentUpon>ProductDetailsSubForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\UpdateCustomersSubForm.resx">
       <DependentUpon>UpdateCustomersSubForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -256,6 +271,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\UpdateMaterialsSubForm.resx">
       <DependentUpon>UpdateMaterialsSubForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UserControls\UC_ProductItem.resx">
+      <DependentUpon>UC_ProductItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\UserControls\UC_Bills.resx">
       <DependentUpon>UC_Bills.cs</DependentUpon>
@@ -272,8 +290,8 @@
     <EmbeddedResource Include="GUI\UserControls\UC_Materials.resx">
       <DependentUpon>UC_Materials.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\UserControls\UC_Products.resx">
-      <DependentUpon>UC_Products.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\UserControls\UC_ProductList.resx">
+      <DependentUpon>UC_ProductList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\UserControls\UC_SalesMetrics.resx">
       <DependentUpon>UC_SalesMetrics.cs</DependentUpon>
@@ -356,6 +374,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="assets\Icons\BlueRoom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\Icons\food-serving.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\Icons\breakfast.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
