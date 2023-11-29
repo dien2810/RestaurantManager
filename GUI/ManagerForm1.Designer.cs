@@ -33,13 +33,13 @@
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.RoleLbl = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.ProductsTabBtn = new Guna.UI2.WinForms.Guna2Button();
             this.TableTabBtn = new Guna.UI2.WinForms.Guna2Button();
             this.MaterialPurchaseTabBtn = new Guna.UI2.WinForms.Guna2Button();
             this.BillTabBtn = new Guna.UI2.WinForms.Guna2Button();
             this.EmployeeTabBtn = new Guna.UI2.WinForms.Guna2Button();
             this.CustomerTabBtn = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
-            this.ProductsTabBtn = new Guna.UI2.WinForms.Guna2Button();
             this.SalesMetricsTabBtn = new Guna.UI2.WinForms.Guna2Button();
             this.MaterialTabBtn = new Guna.UI2.WinForms.Guna2Button();
             this.ContainerPanel = new Guna.UI2.WinForms.Guna2Panel();
@@ -86,6 +86,32 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(214, 563);
             this.guna2Panel1.TabIndex = 1;
+            // 
+            // ProductsTabBtn
+            // 
+            this.ProductsTabBtn.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.ProductsTabBtn.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.ProductsTabBtn.CheckedState.FillColor = System.Drawing.Color.White;
+            this.ProductsTabBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ProductsTabBtn.CustomBorderColor = System.Drawing.Color.White;
+            this.ProductsTabBtn.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 4, 0);
+            this.ProductsTabBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.ProductsTabBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.ProductsTabBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.ProductsTabBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.ProductsTabBtn.FillColor = System.Drawing.Color.White;
+            this.ProductsTabBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProductsTabBtn.ForeColor = System.Drawing.Color.Black;
+            this.ProductsTabBtn.HoverState.FillColor = System.Drawing.Color.Silver;
+            this.ProductsTabBtn.Image = global::RestaurantManager.Properties.Resources.breakfast;
+            this.ProductsTabBtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.ProductsTabBtn.Location = new System.Drawing.Point(3, 0);
+            this.ProductsTabBtn.Name = "ProductsTabBtn";
+            this.ProductsTabBtn.Size = new System.Drawing.Size(211, 60);
+            this.ProductsTabBtn.TabIndex = 0;
+            this.ProductsTabBtn.Text = "Sản phẩm";
+            this.ProductsTabBtn.TextOffset = new System.Drawing.Point(10, 0);
+            this.ProductsTabBtn.Click += new System.EventHandler(this.ProductsTabBtn_Click);
             // 
             // TableTabBtn
             // 
@@ -240,32 +266,6 @@
             this.guna2Button6.Size = new System.Drawing.Size(172, 60);
             this.guna2Button6.TabIndex = 0;
             this.guna2Button6.Text = "Đơn nhập";
-            // 
-            // ProductsTabBtn
-            // 
-            this.ProductsTabBtn.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.ProductsTabBtn.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.ProductsTabBtn.CheckedState.FillColor = System.Drawing.Color.White;
-            this.ProductsTabBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ProductsTabBtn.CustomBorderColor = System.Drawing.Color.White;
-            this.ProductsTabBtn.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 4, 0);
-            this.ProductsTabBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.ProductsTabBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.ProductsTabBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.ProductsTabBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.ProductsTabBtn.FillColor = System.Drawing.Color.White;
-            this.ProductsTabBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ProductsTabBtn.ForeColor = System.Drawing.Color.Black;
-            this.ProductsTabBtn.HoverState.FillColor = System.Drawing.Color.Silver;
-            this.ProductsTabBtn.Image = global::RestaurantManager.Properties.Resources.breakfast;
-            this.ProductsTabBtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.ProductsTabBtn.Location = new System.Drawing.Point(3, 0);
-            this.ProductsTabBtn.Name = "ProductsTabBtn";
-            this.ProductsTabBtn.Size = new System.Drawing.Size(211, 60);
-            this.ProductsTabBtn.TabIndex = 0;
-            this.ProductsTabBtn.Text = "Sản phẩm";
-            this.ProductsTabBtn.TextOffset = new System.Drawing.Point(10, 0);
-            this.ProductsTabBtn.Click += new System.EventHandler(this.ProductsTabBtn_Click);
             // 
             // SalesMetricsTabBtn
             // 

@@ -314,7 +314,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="QuanLyNhaHangAnUong.bak" />
     <None Include="QuanLyNhaHangAnUongDataSet.xsc">
       <DependentUpon>QuanLyNhaHangAnUongDataSet.xsd</DependentUpon>
     </None>
@@ -380,6 +379,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="assets\Icons\breakfast.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Database\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
