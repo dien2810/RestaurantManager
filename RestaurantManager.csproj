@@ -148,6 +148,12 @@
     <Compile Include="GUI\UpdateMaterialsSubForm.Designer.cs">
       <DependentUpon>UpdateMaterialsSubForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\UserControls\UC_Book.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\UserControls\UC_Book.Designer.cs">
+      <DependentUpon>UC_Book.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\UserControls\UC_ProductItem.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -271,6 +277,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\UpdateMaterialsSubForm.resx">
       <DependentUpon>UpdateMaterialsSubForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UserControls\UC_Book.resx">
+      <DependentUpon>UC_Book.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\UserControls\UC_ProductItem.resx">
       <DependentUpon>UC_ProductItem.cs</DependentUpon>

@@ -31,10 +31,17 @@ namespace RestaurantManager.GUI.UserControls
 
         private void DetailsBtn_Click(object sender, EventArgs e)
         {
-            ProductDetailsSubForm productDetailsSubForm = new ProductDetailsSubForm();
-            SetParameterValueCallback += new SetParameterValueDelegate(productDetailsSubForm.FillTheInfo);
-            SetParameterValueCallback(this.ProductID);
-            productDetailsSubForm.ShowDialog();
+            try
+            {
+                ProductDetailsSubForm productDetailsSubForm = new ProductDetailsSubForm();
+                SetParameterValueCallback = new SetParameterValueDelegate(productDetailsSubForm.FillTheInfo);
+                SetParameterValueCallback(this.ProductID);
+                productDetailsSubForm.ShowDialog();
+            } catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Exclamation", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+           
         }
     }
 }

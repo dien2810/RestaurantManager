@@ -37,10 +37,20 @@ namespace RestaurantManager.DAO
         }
         public MaterialDTO GetOne(int MaterialID, ref string ErrMsg)
         {
-            query = "SELECT * FROM NguyenLieu where MaNL = @MaNL";
-            DataTable DT = DataProvider.ExecuteQuery(query, ref ErrMsg, new object[] { MaterialID });
-            return new MaterialDTO(
-                MaterialID,
+            query = "SELECT * FROM NguyenLieu Where MaNL = @MaNL";
+            DataTable DT = DataProvider.ExecuteQuery(query, ref ErrMsg, new object[] { MaterialID });            
+            if (DT.Rows[0].ItemArray[4].ToString() == "")
+            {
+                int managerID = 0;
+                return new MaterialDTO(MaterialID,
+                DT.Rows[0].ItemArray[1].ToString(),
+                DT.Rows[0].ItemArray[2].ToString(),
+                int.Parse(DT.Rows[0].ItemArray[3].ToString()),
+                managerID,
+                int.Parse(DT.Rows[0].ItemArray[5].ToString())
+                );
+            }
+            return new MaterialDTO(MaterialID,
                 DT.Rows[0].ItemArray[1].ToString(),
                 DT.Rows[0].ItemArray[2].ToString(),
                 int.Parse(DT.Rows[0].ItemArray[3].ToString()),

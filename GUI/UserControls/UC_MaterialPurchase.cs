@@ -40,10 +40,18 @@ namespace RestaurantManager.GUI.UserControls
             // get the ID
             int MP_ID = GetTheMP_ID();
 
-            MaterialPurchase_DAO.Delete(MP_ID, ref ErrMsg);
-            ShowMessage.ConfirmationBox("Bạn có muốn xoá đơn nhập có mã đơn " + MP_ID.ToString() + "?");
-            if(ShowMessage.CheckAndShowErr(ref ErrMsg)) { MessageBox.Show("Xoá đơn nhập thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information); }
-            UC_MaterialPurchase_Load(sender, e);
+            
+            if (ShowMessage.ConfirmationBox("Bạn có muốn xoá đơn nhập có mã đơn " + MP_ID.ToString() + "?"))
+            {
+                MaterialPurchase_DAO.Delete(MP_ID, ref ErrMsg);
+                if (ShowMessage.CheckAndShowErr(ref ErrMsg)) { MessageBox.Show("Xoá đơn nhập thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information); }
+                UC_MaterialPurchase_Load(sender, e);
+            }
+            else
+            {
+                return;
+            }               
+            
         }
 
         private void AddMPBtn_Click(object sender, EventArgs e)
@@ -81,7 +89,7 @@ namespace RestaurantManager.GUI.UserControls
             int MP_ID = GetTheMP_ID();
 
             MP_DetailsSubForm MP_Details_SubForm = new MP_DetailsSubForm();
-            SetParameterValueCallback += new SetParameterValueDelegate(MP_Details_SubForm.FillTheInfo);
+            SetParameterValueCallback = new SetParameterValueDelegate(MP_Details_SubForm.FillTheInfo);
             SetParameterValueCallback(MP_ID);
             MP_Details_SubForm.ShowDialog();
         }

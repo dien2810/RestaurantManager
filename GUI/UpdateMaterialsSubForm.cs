@@ -35,13 +35,31 @@ namespace RestaurantManager.GUI
 
         private void AddMaterialBtn_Click(object sender, EventArgs e)
         {
+            int quantity;
+            int employeeID;
+            int quantityLimit;
+            if (int.TryParse(QuantityTextbox.Text, out quantity) == false)
+            {
+                MessageBox.Show("Số lượng phải là số nguyên", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            if (int.TryParse(EmployeeIDTextbox.Text, out employeeID) == false)
+            {
+                MessageBox.Show("Mã nhân viên quản lý phải là số nguyên", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            if (int.TryParse(QuantityLimitTextbox.Text, out quantityLimit) == false)
+            {
+                MessageBox.Show("Số lượng tồn kho phải là số nguyên", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
             Material_DAO.Update(new MaterialDTO(
                 Material_DTO.ID,
                 NameTextbox.Text,
                 UnitTextbox.Text,
-                int.Parse(QuantityTextbox.Text),
-                int.Parse(EmployeeIDTextbox.Text),
-                int.Parse(QuantityLimitTextbox.Text)
+                quantity,
+                employeeID,
+                quantityLimit
                 ), ref ErrMsg);
             ShowMessage.CheckAndShowErr(ref ErrMsg);
             if (ErrMsg == null) { MessageBox.Show("Cập nhật nguyên liệu thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information); }

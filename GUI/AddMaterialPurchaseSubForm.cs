@@ -51,13 +51,29 @@ namespace RestaurantManager.GUI
         {
             if(MaterialsCB.Text != "")
             {
-                UpdateTotalTextbox();
                 // add to dg
+                int Quantity;
+                if (int.TryParse(QuantityTextbox.Text, out Quantity) == false)
+                {
+                    MessageBox.Show("Số lượng phải là số nguyên!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                }
                 string NameOfMaterials = MaterialsCB.Text.Substring(0, MaterialsCB.Text.IndexOf(";"));
-                string Price = MaterialsCB.Text.Substring(MaterialsCB.Text.IndexOf(":") + 1);
-                string Quantity = QuantityTextbox.Text;
+                string Price = MaterialsCB.Text.Substring(MaterialsCB.Text.IndexOf(":") + 1);                
                 string Value = (int.Parse(QuantityTextbox.Text) * int.Parse(MaterialsCB.Text.Substring(MaterialsCB.Text.IndexOf(":") + 1))).ToString();
 
+                for (int i = 0; i < MaterialsDG.Rows.Count-1; i++)
+                {
+                    if (NameOfMaterials == MaterialsDG.Rows[i].Cells[0].Value.ToString() && 
+                        Price == MaterialsDG.Rows[i].Cells[1].Value.ToString())
+                    {
+                        int newQuantity = Quantity + int.Parse(MaterialsDG.Rows[i].Cells[2].Value.ToString());
+                        MaterialsDG.Rows[i].Cells[2].Value = newQuantity;
+                        MaterialsDG.Rows[i].Cells[3].Value = (newQuantity*int.Parse(Price)).ToString();
+                        UpdateTotalTextbox();
+                        return;
+                    }
+                }
                 DataGridViewRow dataRow = (DataGridViewRow)MaterialsDG.Rows[0].Clone();
                 dataRow.Cells[0].Value = NameOfMaterials;
                 dataRow.Cells[1].Value = Price;
@@ -65,6 +81,7 @@ namespace RestaurantManager.GUI
                 dataRow.Cells[3].Value = Value;
 
                 MaterialsDG.Rows.Add(dataRow);
+                UpdateTotalTextbox();
             }
         }
 

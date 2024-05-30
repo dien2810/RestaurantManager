@@ -63,10 +63,11 @@ namespace RestaurantManager.GUI.UserControls
             //get the value of EmployeeID
             int selectedRowIndex = MaterialsDG.SelectedCells[0].RowIndex;
             DataGridViewRow selectedRow = MaterialsDG.Rows[selectedRowIndex];
-            int selectedMaterialID = Convert.ToInt16(selectedRow.Cells[0].Value);
+            int selectedMaterialID = Convert.ToInt16(selectedRow.Cells[0].Value.ToString());
 
+            Console.WriteLine("@@@@Material ID="+ selectedMaterialID);
             UpdateMaterialsSubForm updateMaterialsSubForm = new UpdateMaterialsSubForm();
-            SetParameterValueCallback += new SetParameterValueDelegate(updateMaterialsSubForm.FillTheInfoTextbox);
+            SetParameterValueCallback = new SetParameterValueDelegate(updateMaterialsSubForm.FillTheInfoTextbox);
             SetParameterValueCallback(selectedMaterialID);
             updateMaterialsSubForm.ShowDialog();
             UC_Materials_Load(sender, e);

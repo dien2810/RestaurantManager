@@ -56,14 +56,28 @@ namespace RestaurantManager.GUI
 
         private void AddProductBtn_Click(object sender, EventArgs e)
         {
+            int Quantity;
             if(ProductsCB.Text.Length == 0)
             {
                 return;
             }
             string NameOfProduct = ProductsDT.Rows[ProductsCB.SelectedIndex][1].ToString();
-            int Quantity = int.Parse(QuantityTextbox.Text);
+            if (!int.TryParse(QuantityTextbox.Text, out Quantity))
+            {
+                MessageBox.Show("Số lượng phải là số nguyên", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }            
             double Price = double.Parse(ProductsDT.Rows[ProductsCB.SelectedIndex][2].ToString());
-            
+            for (int i = 0; i < ProductListDG.Rows.Count-1; i++)
+            {
+                if (ProductListDG.Rows[i].Cells[0].Value.ToString() == NameOfProduct && double.Parse(ProductListDG.Rows[i].Cells[2].Value.ToString()) == Price)
+                {
+                    int newQuantity = int.Parse(ProductListDG.Rows[i].Cells[1].Value.ToString()) + Quantity;
+                    ProductListDG.Rows[i].Cells[1].Value = newQuantity;
+                    UpdateTotal();
+                    return;
+                }
+            }
             DataGridViewRow dataRow = (DataGridViewRow)ProductListDG.Rows[0].Clone();
             dataRow.Cells[0].Value = NameOfProduct;
             dataRow.Cells[1].Value = Quantity;

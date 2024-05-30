@@ -45,6 +45,8 @@ namespace RestaurantManager.DAO
         }
         public static DataTable ExecuteQuery(string Query, ref string ErrMsg, object[] ParameterValues = null)
         {
+            Console.WriteLine("Username=", UserName);
+            Console.WriteLine("Password=", PassWord);
             ConnectionString = $@"Data Source=.;Initial Catalog=QuanLyNhaHangAnUong; User ID={Username}; Password={Password}";
             DataTable Table = new DataTable();
             try
@@ -58,9 +60,10 @@ namespace RestaurantManager.DAO
                         string[] Parameters = Query.Split(' ');
                         int i = 0;
                         foreach (string param in Parameters)
-                        {
+                        {                            
                             if (param.Contains("@"))
                             {
+                                Console.WriteLine(param + "=" + ParameterValues[i]);
                                 cmd.Parameters.AddWithValue(param, ParameterValues[i++]);
                             }
                         }
@@ -98,7 +101,9 @@ namespace RestaurantManager.DAO
                     rowsAffected = cmd.ExecuteNonQuery();
                 }
             }
-            catch(Exception e) { ErrMsg = e.Message;}
+            catch(Exception e) { ErrMsg = e.Message;
+                MessageBox.Show(e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             finally 
             {
                 Connection.InfoMessage += delegate (object sender, SqlInfoMessageEventArgs e)

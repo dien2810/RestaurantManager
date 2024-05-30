@@ -50,15 +50,17 @@ namespace RestaurantManager.GUI
                             cmdMaCV.Parameters.AddWithValue("@Username", username);
 
                             int maCV = (int)cmdMaCV.ExecuteScalar();
-
+                            DataProvider.SetLoggedInUsername(username, password);
                             if (maCV == 1)
                             {
                                 // Đăng nhập thành công và có quyền quản trị
                                 MessageBox.Show("Đăng nhập thành công với tư cách là quản lý!");
                                 // Chuyển đến form managerForm1
                                 ManagerForm1 managerForm = new ManagerForm1();
-                                managerForm.Show();
-                                this.Hide(); // Ẩn form hiện tại
+                                this.Hide();
+                                managerForm.ShowDialog();
+                                this.Show();
+                                 // Ẩn form hiện tại
                             }
                             else
                             {
@@ -68,10 +70,11 @@ namespace RestaurantManager.GUI
                                 ManagerForm1 employeeForm = new ManagerForm1();
                                 SetParameterValueCallback += new SetParameterValueDelegate(employeeForm.GetTheRole);
                                 SetParameterValueCallback(username);
-                                employeeForm.Show();
-                                this.Hide(); // Ẩn form hiện tại
+                                this.Hide();
+                                employeeForm.ShowDialog();
+                                this.Show(); // Ẩn form hiện tại
                             }
-                            DataProvider.SetLoggedInUsername(username, password);
+                            
                         }
                     }
                     else

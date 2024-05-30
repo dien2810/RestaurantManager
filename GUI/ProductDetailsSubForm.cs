@@ -22,6 +22,10 @@ namespace RestaurantManager.GUI
         public void FillTheInfo(int ProductID)
         {
             DataTable DT = DataProvider.ExecuteQuery("SELECT * FROM V_SanPhamVaNguyenLieu WHERE MaSP = " + ProductID.ToString(), ref ErrMsg);
+            if (ErrMsg != null)
+            {                
+                throw new Exception("Ban khong duoc phep truy cap chuc nang nay");
+            }
             TitleLbl.Text = "Chi tiết sản phẩm " + DT.Rows[0].ItemArray[1].ToString();
             PriceLbl.Text = "Giá: " + DT.Rows[0].ItemArray[2].ToString();
             foreach (DataRow dr in DT.Rows)
